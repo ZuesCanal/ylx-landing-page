@@ -389,7 +389,7 @@ const Index = () => {
         <div className="container py-14">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
             <div className="md:col-span-5">
-              <img src={ylxLogo} alt="YLX" className="h-14 w-auto object-contain mix-blend-screen" />
+              <img src={ylxLogo} alt="YLX" className="h-24 w-auto object-contain mix-blend-screen" />
               <p className="mt-4 text-sm text-primary-foreground/60 max-w-sm">
                 Policy-driven digital asset treasury infrastructure.
               </p>
