@@ -25,11 +25,11 @@ export const Section = ({
             </p>
           )}
           {title && (
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.65rem] leading-[1.1] tracking-tight text-foreground">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.65rem] leading-[1.1] tracking-tight text-current">
               {title}
             </h2>
           )}
-          {body && <p className="mt-5 text-base sm:text-lg text-muted-foreground leading-relaxed">{body}</p>}
+          {body && <p className="mt-5 text-base sm:text-lg opacity-75 leading-relaxed">{body}</p>}
         </div>
       )}
       {children}
