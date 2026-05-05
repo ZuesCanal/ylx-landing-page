@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import ylxLogo from "@/assets/ylx-logo.jpeg";
 import { Nav } from "@/components/ylx/Nav";
 import { HeroDashboard } from "@/components/ylx/HeroDashboard";
 import { Section } from "@/components/ylx/Section";
@@ -388,10 +389,7 @@ const Index = () => {
         <div className="container py-14">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
             <div className="md:col-span-5">
-              <div className="flex items-center gap-2 font-display text-xl text-primary-foreground">
-                <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-accent text-accent-foreground text-[11px] font-bold">Y</span>
-                YLX
-              </div>
+              <img src={ylxLogo} alt="YLX" className="h-14 w-auto object-contain mix-blend-screen" />
               <p className="mt-4 text-sm text-primary-foreground/60 max-w-sm">
                 Policy-driven digital asset treasury infrastructure.
               </p>
