@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import ylxLogo from "@/assets/ylx-logo.jpeg";
+import ylxLogo from "@/assets/ylx-logo.png";
 import { Nav } from "@/components/ylx/Nav";
 import { HeroDashboard } from "@/components/ylx/HeroDashboard";
 import { Section } from "@/components/ylx/Section";
@@ -105,13 +105,13 @@ const Index = () => {
           <div className="lg:col-span-5 animate-fade-up">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-muted-foreground font-mono">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              Treasury OS · Institutional preview
+              Institutional preview
             </div>
-            <h1 className="mt-6 font-display text-[2.5rem] sm:text-5xl lg:text-[3.6rem] leading-[1.04] tracking-tight text-foreground">
-              The treasury operating system for digital assets.
+            <h1 className="mt-6 font-display text-[2.75rem] sm:text-6xl lg:text-[4rem] leading-[1.02] tracking-tight text-foreground">
+              Governed yield. <span className="text-muted-foreground">On-chain.</span>
             </h1>
-            <p className="mt-6 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl">
-              YLX helps institutions evaluate stablecoin, DeFi and tokenized RWA yield opportunities, convert treasury mandates into enforceable policy rules, and route capital across approved venues with real-time risk monitoring and audit-ready reporting.
+            <p className="mt-6 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-md">
+              The treasury operating system for digital assets.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary-glow group">
@@ -119,7 +119,7 @@ const Index = () => {
                 <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Button>
               <Button size="lg" variant="outline" className="border-border-strong text-foreground bg-card">
-                View platform
+                View demo
               </Button>
             </div>
             <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted-foreground font-mono">
@@ -147,6 +147,27 @@ const Index = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CINEMATIC MOMENT */}
+      <section className="relative overflow-hidden bg-gradient-navy text-primary-foreground">
+        <div className="absolute inset-0 opacity-[0.07] pointer-events-none [background-image:linear-gradient(hsl(var(--accent))_1px,transparent_1px),linear-gradient(90deg,hsl(var(--accent))_1px,transparent_1px)] [background-size:64px_64px]" />
+        <div className="absolute -top-40 -right-40 h-[520px] w-[520px] rounded-full bg-accent/20 blur-[160px]" />
+        <div className="absolute -bottom-40 -left-40 h-[520px] w-[520px] rounded-full bg-primary-glow/40 blur-[160px]" />
+        <div className="container relative py-32 sm:py-44 lg:py-56 max-w-5xl">
+          <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-accent">The landscape</p>
+          <h2 className="mt-6 font-display text-4xl sm:text-6xl lg:text-[4.5rem] leading-[1.02] tracking-tight">
+            Yield is everywhere.
+            <br />
+            <span className="text-primary-foreground/50">Governance is nowhere.</span>
+          </h2>
+          <p className="mt-8 max-w-2xl text-base sm:text-lg text-primary-foreground/70 leading-relaxed">
+            Stablecoins, tokenized Treasuries, vaults, protocols, custodians, chains. Headline APYs without context. Mandates trapped in PDFs. Audit trails reconstructed after the fact.
+          </p>
+          <p className="mt-6 max-w-2xl text-base sm:text-lg text-primary-foreground leading-relaxed">
+            YLX is the layer between policy and execution.
+          </p>
         </div>
       </section>
 
@@ -389,7 +410,7 @@ const Index = () => {
         <div className="container py-14">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
             <div className="md:col-span-5">
-              <img src={ylxLogo} alt="YLX" className="h-24 w-auto object-contain mix-blend-screen" />
+              <img src={ylxLogo} alt="YLX" className="h-24 w-auto object-contain" />
               <p className="mt-4 text-sm text-primary-foreground/60 max-w-sm">
                 Policy-driven digital asset treasury infrastructure.
               </p>
