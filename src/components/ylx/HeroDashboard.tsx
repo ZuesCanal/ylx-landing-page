@@ -13,15 +13,21 @@ const Spark = ({ color = "hsl(var(--accent))" }: { color?: string }) => (
   </svg>
 );
 
-const Bar = ({ value, label }: { value: number; label: string }) => (
-  <div className="flex items-center gap-3">
-    <span className="w-28 text-[11px] text-muted-foreground font-mono uppercase tracking-wider">{label}</span>
-    <div className="flex-1 h-1.5 rounded-full bg-secondary overflow-hidden">
-      <div className="h-full rounded-full bg-gradient-accent" style={{ width: `${value}%` }} />
+const Bar = ({ value, label }: { value: number; label: string }) => {
+  const belowThreshold = value < 80;
+  return (
+    <div className="flex items-center gap-3">
+      <span className="w-28 text-[11px] text-muted-foreground font-mono uppercase tracking-wider">{label}</span>
+      <div className="flex-1 h-1.5 rounded-full bg-secondary overflow-hidden">
+        <div
+          className={`h-full rounded-full ${belowThreshold ? "bg-warning" : "bg-gradient-accent"}`}
+          style={{ width: `${value}%` }}
+        />
+      </div>
+      <span className={`w-8 text-[11px] font-mono ${belowThreshold ? "text-warning" : "text-foreground"}`}>{value}</span>
     </div>
-    <span className="w-8 text-[11px] text-foreground font-mono">{value}</span>
-  </div>
-);
+  );
+};
 
 export const HeroDashboard = () => {
   return (
