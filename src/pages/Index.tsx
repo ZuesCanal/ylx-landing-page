@@ -101,7 +101,7 @@ const Index = () => {
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-gradient-hero border-b border-border">
-        <div className="container pt-16 sm:pt-24 pb-20 sm:pb-28 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="container pt-16 sm:pt-24 pb-20 sm:pb-28 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-5 animate-fade-up">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-muted-foreground font-mono">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
