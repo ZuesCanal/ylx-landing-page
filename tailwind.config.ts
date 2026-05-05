@@ -15,13 +15,19 @@ export default {
     extend: {
       colors: {
         border: "hsl(var(--border))",
+        "border-strong": "hsl(var(--border-strong))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        surface: {
+          DEFAULT: "hsl(var(--surface))",
+          elevated: "hsl(var(--surface-elevated))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -38,7 +44,14 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          soft: "hsl(var(--accent-soft))",
         },
+        graphite: {
+          DEFAULT: "hsl(var(--graphite))",
+          foreground: "hsl(var(--graphite-foreground))",
+        },
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -63,6 +76,23 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-panel": "var(--gradient-panel)",
+        "gradient-navy": "var(--gradient-navy)",
+        "gradient-accent": "var(--gradient-accent)",
+      },
+      boxShadow: {
+        sm: "var(--shadow-sm)",
+        md: "var(--shadow-md)",
+        lg: "var(--shadow-lg)",
+        panel: "var(--shadow-panel)",
+      },
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["'Instrument Sans'", "Inter", "ui-sans-serif", "sans-serif"],
+        mono: ["'JetBrains Mono'", "ui-monospace", "monospace"],
+      },
       keyframes: {
         "accordion-down": {
           from: {
@@ -80,10 +110,25 @@ export default {
             height: "0",
           },
         },
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(12px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "pulse-soft": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
+        },
+        "ticker": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-up": "fade-up 0.6s cubic-bezier(0.4,0,0.2,1) both",
+        "pulse-soft": "pulse-soft 2.4s ease-in-out infinite",
+        "ticker": "ticker 40s linear infinite",
       },
     },
   },
