@@ -8,35 +8,62 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* YLX institutional palette */
+    --background: 220 33% 99%;
+    --foreground: 220 40% 11%;
+
+    --surface: 220 30% 98%;
+    --surface-elevated: 0 0% 100%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 40% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 40% 11%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Deep navy */
+    --primary: 220 55% 14%;
     --primary-foreground: 210 40% 98%;
+    --primary-glow: 220 50% 22%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 25% 96%;
+    --secondary-foreground: 220 40% 14%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 12% 42%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Muted teal/green accent */
+    --accent: 168 45% 38%;
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 168 40% 94%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Graphite */
+    --graphite: 220 14% 28%;
+    --graphite-foreground: 220 20% 92%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --success: 152 55% 38%;
+    --warning: 38 90% 50%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    --border: 220 18% 90%;
+    --border-strong: 220 18% 82%;
+    --input: 220 18% 90%;
+    --ring: 220 55% 14%;
+
+    --radius: 0.75rem;
+
+    --gradient-hero: radial-gradient(1200px 600px at 80% -10%, hsl(168 45% 38% / 0.08), transparent 60%), linear-gradient(180deg, hsl(220 33% 99%) 0%, hsl(220 30% 97%) 100%);
+    --gradient-panel: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 30% 99%) 100%);
+    --gradient-navy: linear-gradient(135deg, hsl(220 55% 14%) 0%, hsl(220 60% 9%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(168 45% 38%) 0%, hsl(196 55% 38%) 100%);
+
+    --shadow-sm: 0 1px 2px hsl(220 40% 11% / 0.04);
+    --shadow-md: 0 4px 12px -2px hsl(220 40% 11% / 0.06), 0 2px 4px -2px hsl(220 40% 11% / 0.04);
+    --shadow-lg: 0 24px 48px -12px hsl(220 40% 11% / 0.12), 0 8px 16px -8px hsl(220 40% 11% / 0.06);
+    --shadow-panel: 0 1px 0 hsl(220 18% 92%), 0 12px 32px -12px hsl(220 40% 11% / 0.08);
+
+    --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
