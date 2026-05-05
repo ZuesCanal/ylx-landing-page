@@ -278,7 +278,7 @@ const Index = () => {
             <div key={t} className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <div className="flex items-center gap-3">
                 <div className="h-9 w-9 rounded-lg bg-secondary text-foreground inline-flex items-center justify-center">
-                  <Icon className="h-4.5 w-4.5" />
+                  <Icon className="h-4 w-4" />
                 </div>
                 <h3 className="font-display text-base font-semibold text-foreground">{t}</h3>
               </div>
