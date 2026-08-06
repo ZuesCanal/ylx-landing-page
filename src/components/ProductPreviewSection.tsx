@@ -21,10 +21,20 @@ export function ProductPreviewSection() {
 
         <SectionReveal className="mt-12 overflow-hidden rounded-2xl border border-slate-200">
           <Image
-            src="/health-check-preview.png"
-            alt="Portfolio health check dashboard showing total value, weighted IST, RQS, and Track Record scores, a policy breach count, and a holdings table with per-asset conviction, policy status, and audit verification."
-            width={1256}
-            height={801}
+            src="/health-check-kpis.png"
+            alt="Portfolio health check summary: total value, weighted IST, RQS, and Track Record scores, and a policy breach count."
+            width={1233}
+            height={399}
+            className="h-auto w-full"
+          />
+        </SectionReveal>
+
+        <SectionReveal className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
+          <Image
+            src="/health-check-holdings.png"
+            alt="Holdings table showing per-asset value, yield, IST, RQS, Fair Yield, Track Record, conviction, policy status, and audit verification."
+            width={1233}
+            height={373}
             className="h-auto w-full"
           />
         </SectionReveal>

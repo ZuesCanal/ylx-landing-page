@@ -9,7 +9,8 @@ describe("ProductPreviewSection", () => {
       screen.getByRole("heading", { name: /see what you hold/i })
     ).toBeInTheDocument();
     expect(
-      screen.getByAltText(/portfolio health check dashboard/i)
+      screen.getByAltText(/portfolio health check summary/i)
     ).toBeInTheDocument();
+    expect(screen.getByAltText(/holdings table/i)).toBeInTheDocument();
   });
 });
