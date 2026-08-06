@@ -46,7 +46,7 @@ export function WaitlistForm() {
 
   if (submitState === "success") {
     return (
-      <p role="status" className="font-medium text-emerald-700">
+      <p role="status" className="font-medium text-navy">
         Request received. Our team will follow up with the whitepaper, pitch
         deck, and pilot access details.
       </p>
@@ -63,7 +63,7 @@ export function WaitlistForm() {
           id="name"
           type="text"
           {...register("name")}
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600"
+          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy"
         />
         {errors.name && (
           <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
@@ -78,7 +78,7 @@ export function WaitlistForm() {
           id="email"
           type="email"
           {...register("email")}
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600"
+          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy"
         />
         {errors.email && (
           <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
@@ -93,7 +93,7 @@ export function WaitlistForm() {
           id="organization"
           type="text"
           {...register("organization")}
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600"
+          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy"
         />
         {errors.organization && (
           <p className="mt-1 text-sm text-red-600">
@@ -113,7 +113,7 @@ export function WaitlistForm() {
           id="organizationType"
           defaultValue=""
           {...register("organizationType")}
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600"
+          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy"
         >
           <option value="" disabled>
             Select one
@@ -140,7 +140,7 @@ export function WaitlistForm() {
       <button
         type="submit"
         disabled={submitState === "submitting"}
-        className="mt-2 rounded-md bg-emerald-600 px-4 py-2 font-medium text-white transition-colors hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-2 rounded-full bg-navy px-4 py-2 font-medium text-white transition-colors hover:bg-black disabled:cursor-not-allowed disabled:opacity-60"
       >
         {submitState === "submitting"
           ? "Submitting…"

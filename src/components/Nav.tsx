@@ -7,7 +7,7 @@ export function Nav() {
         </span>
         <a
           href="#waitlist"
-          className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-emerald-700"
+          className="rounded-full bg-navy px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-black"
         >
           Request Access
         </a>

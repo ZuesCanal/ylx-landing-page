@@ -3,10 +3,10 @@ import { SectionReveal } from "./SectionReveal";
 
 export function PillarsSection() {
   return (
-    <section className="bg-slate-50 py-20">
+    <section className="border-t border-slate-200 py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionReveal className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-navy">
+        <SectionReveal className="max-w-xl">
+          <h2 className="text-4xl font-medium tracking-tighter text-navy sm:text-5xl">
             The Control Layer
           </h2>
           <p className="mt-4 text-charcoal">
@@ -16,23 +16,30 @@ export function PillarsSection() {
           </p>
         </SectionReveal>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {pillars.map((pillar) => (
+        <div className="mt-16">
+          {pillars.map((pillar, index) => (
             <SectionReveal
               key={pillar.name}
-              className="rounded-lg border border-slate-200 bg-white p-6"
+              className="grid grid-cols-1 gap-4 border-t border-slate-200 py-8 sm:grid-cols-[3rem_1fr_1fr] sm:items-start sm:gap-8"
             >
-              <pillar.icon
-                className="h-8 w-8 text-emerald-600"
-                aria-hidden="true"
-              />
-              <h3 className="mt-4 text-xl font-semibold text-navy">
-                {pillar.name}
-              </h3>
-              <p className="mt-2 text-sm text-charcoal">{pillar.function}</p>
-              <p className="mt-3 text-sm text-slate-500">
-                {pillar.workflowFit}
-              </p>
+              <span className="text-sm text-slate-400">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div className="flex items-center gap-3">
+                <pillar.icon
+                  className="h-5 w-5 text-navy"
+                  aria-hidden="true"
+                />
+                <h3 className="text-xl font-medium text-navy">
+                  {pillar.name}
+                </h3>
+              </div>
+              <div>
+                <p className="text-charcoal">{pillar.function}</p>
+                <p className="mt-2 text-sm text-slate-500">
+                  {pillar.workflowFit}
+                </p>
+              </div>
             </SectionReveal>
           ))}
         </div>
