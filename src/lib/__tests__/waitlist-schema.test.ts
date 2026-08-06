@@ -41,4 +41,20 @@ describe("waitlistSchema", () => {
     });
     expect(result.success).toBe(false);
   });
+
+  it("returns custom error message for invalid organization type", () => {
+    const result = waitlistSchema.safeParse({
+      name: "Jordan Blake",
+      email: "jordan@fund.com",
+      organization: "Blake Capital",
+      organizationType: "Hedge Fund",
+    });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      const orgTypeError = result.error.issues.find(
+        (issue) => issue.path[0] === "organizationType"
+      );
+      expect(orgTypeError?.message).toBe("Select an organization type");
+    }
+  });
 });

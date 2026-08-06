@@ -13,7 +13,7 @@ export const waitlistSchema = z.object({
   email: z.string().trim().email("Enter a valid work email"),
   organization: z.string().trim().min(2, "Enter your organization name"),
   organizationType: z.enum(organizationTypes, {
-    errorMap: () => ({ message: "Select an organization type" }),
+    error: () => "Select an organization type",
   }),
 });
 
