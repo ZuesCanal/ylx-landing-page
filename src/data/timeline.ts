@@ -22,6 +22,6 @@ export const timeline: TimelineMilestone[] = [
   {
     title: "Standardized Global Rating Framework",
     description:
-      "A common reference standard for institutional-grade digital asset vault risk.",
+      "A common reference standard for institutional-grade digital asset risk.",
   },
 ];
