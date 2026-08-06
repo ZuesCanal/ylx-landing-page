@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section className="mx-auto max-w-6xl px-6 pb-24 pt-28 text-center">
       <h1 className="text-5xl font-medium leading-[1.05] tracking-tighter text-navy sm:text-6xl lg:text-7xl">
-        YLX provides the trusted control layer that lets institutions
+        PHYLX provides the trusted control layer that lets institutions
         navigate digital assets safely
       </h1>
       <p className="mx-auto mt-8 max-w-2xl text-lg text-charcoal">
