@@ -12,7 +12,7 @@ export const timeline: TimelineMilestone[] = [
   {
     title: "Institutional Pilots",
     description:
-      "MVP validation with early institutional partners during the Helix Ventures phase.",
+      "MVP validation with early pilot partners across Stablecoins, Auditing, and Structured Products.",
   },
   {
     title: "Multi-Jurisdiction Coverage",
