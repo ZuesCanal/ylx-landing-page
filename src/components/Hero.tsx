@@ -19,6 +19,22 @@ export function Hero() {
         Request Whitepaper &amp; Pilot Access
         <ArrowRight className="h-4 w-4" aria-hidden="true" />
       </a>
+
+      <div className="mx-auto mt-10 flex w-fit items-center gap-8 text-xs uppercase tracking-wide text-slate-400">
+        <div>
+          <span className="block text-lg font-medium normal-case tracking-normal text-navy">
+            700+
+          </span>
+          Protocols &amp; Products — Covered Universe
+        </div>
+        <div className="h-8 w-px bg-slate-200" aria-hidden="true" />
+        <div>
+          <span className="block text-lg font-medium normal-case tracking-normal text-navy">
+            $1T+
+          </span>
+          Covered TVL
+        </div>
+      </div>
     </section>
   );
 }

@@ -18,4 +18,14 @@ describe("Hero", () => {
     const cta = screen.getByRole("link", { name: /request whitepaper/i });
     expect(cta).toHaveAttribute("href", "#waitlist");
   });
+
+  it("shows the covered-universe coverage stats", () => {
+    render(<Hero />);
+    expect(screen.getByText("700+")).toBeInTheDocument();
+    expect(
+      screen.getByText(/Covered Universe/i)
+    ).toBeInTheDocument();
+    expect(screen.getByText("$1T+")).toBeInTheDocument();
+    expect(screen.getByText(/Covered TVL/i)).toBeInTheDocument();
+  });
 });
