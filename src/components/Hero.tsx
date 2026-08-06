@@ -8,7 +8,7 @@ export function Hero() {
         navigate digital assets safely
       </h1>
       <p className="mx-auto mt-8 max-w-2xl text-lg text-charcoal">
-        We turn your mandate into evidence, approvals, and an audit
+        We turn your mandate into policy, evidence, approvals, and an audit
         trail — standardizing ratings and scoring for digital assets into a
         single surface of Sight, Flow, Trace, and Guard.
       </p>
