@@ -62,11 +62,15 @@ export function WaitlistForm() {
         <input
           id="name"
           type="text"
+          aria-invalid={errors.name ? "true" : "false"}
+          aria-describedby={errors.name ? "name-error" : undefined}
           {...register("name")}
           className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy"
         />
         {errors.name && (
-          <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
+          <p id="name-error" className="mt-1 text-sm text-red-600">
+            {errors.name.message}
+          </p>
         )}
       </div>
 
@@ -77,11 +81,15 @@ export function WaitlistForm() {
         <input
           id="email"
           type="email"
+          aria-invalid={errors.email ? "true" : "false"}
+          aria-describedby={errors.email ? "email-error" : undefined}
           {...register("email")}
           className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy"
         />
         {errors.email && (
-          <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+          <p id="email-error" className="mt-1 text-sm text-red-600">
+            {errors.email.message}
+          </p>
         )}
       </div>
 
@@ -92,11 +100,13 @@ export function WaitlistForm() {
         <input
           id="organization"
           type="text"
+          aria-invalid={errors.organization ? "true" : "false"}
+          aria-describedby={errors.organization ? "organization-error" : undefined}
           {...register("organization")}
           className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy"
         />
         {errors.organization && (
-          <p className="mt-1 text-sm text-red-600">
+          <p id="organization-error" className="mt-1 text-sm text-red-600">
             {errors.organization.message}
           </p>
         )}
@@ -112,6 +122,10 @@ export function WaitlistForm() {
         <select
           id="organizationType"
           defaultValue=""
+          aria-invalid={errors.organizationType ? "true" : "false"}
+          aria-describedby={
+            errors.organizationType ? "organizationType-error" : undefined
+          }
           {...register("organizationType")}
           className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy"
         >
@@ -125,7 +139,7 @@ export function WaitlistForm() {
           ))}
         </select>
         {errors.organizationType && (
-          <p className="mt-1 text-sm text-red-600">
+          <p id="organizationType-error" className="mt-1 text-sm text-red-600">
             {errors.organizationType.message}
           </p>
         )}
@@ -140,7 +154,7 @@ export function WaitlistForm() {
       <button
         type="submit"
         disabled={submitState === "submitting"}
-        className="mt-2 rounded-full bg-navy px-4 py-2 font-medium text-white transition-colors hover:bg-black disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-2 rounded-full bg-navy px-4 py-2 font-medium text-white transition-opacity hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {submitState === "submitting"
           ? "Submitting…"
