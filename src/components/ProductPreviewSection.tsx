@@ -19,22 +19,13 @@ export function ProductPreviewSection() {
           </p>
         </SectionReveal>
 
-        <SectionReveal className="mt-12 overflow-hidden rounded-2xl border border-slate-200">
+        <SectionReveal className="mt-12">
           <Image
-            src="/health-check-kpis.png"
-            alt="Portfolio health check summary: total value, weighted IST, RQS, and Track Record scores, and a policy breach count."
-            width={1233}
-            height={399}
-            className="h-auto w-full"
-          />
-        </SectionReveal>
-
-        <SectionReveal className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
-          <Image
-            src="/health-check-holdings.png"
-            alt="Holdings table showing per-asset value, yield, IST, RQS, Fair Yield, Track Record, conviction, policy status, and audit verification."
-            width={1233}
-            height={373}
+            src="/health-check-preview.png"
+            alt="PHYLX portfolio health check: wallet summary, weighted IST, RQS, and Track Record scores, policy breach count, and a six-position holdings table with per-asset yield, scores, policy status, and audit verification."
+            width={2592}
+            height={2236}
+            sizes="(min-width: 896px) 896px, 100vw"
             className="h-auto w-full"
           />
         </SectionReveal>
