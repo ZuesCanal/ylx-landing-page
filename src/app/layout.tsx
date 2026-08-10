@@ -6,14 +6,52 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "YLX — The Trusted Control Layer for Institutional Digital Assets",
+  metadataBase: new URL("https://www.phylx.ai"),
+  title: "PHYLX — Control Layer for Institutional Digital Assets",
   description:
-    "YLX standardizes digital asset vault infrastructure into Sight, Flow, Trace, and Guard — a control layer institutions can safely allocate through.",
+    "PHYLX standardizes digital asset vault infrastructure into Sight, Flow, Trace, and Guard — a control layer institutions can safely allocate through.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "https://www.phylx.ai/",
+    siteName: "PHYLX",
+    title: "PHYLX — Control Layer for Institutional Digital Assets",
+    description:
+      "Turn your mandate into policy, evidence, approvals, and an audit trail — standardized ratings for digital assets across Sight, Flow, Trace, and Guard.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PHYLX — Control Layer for Institutional Digital Assets",
+    description:
+      "Turn your mandate into policy, evidence, approvals, and an audit trail — standardized ratings for digital assets.",
+  },
 };
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "PHYLX",
+    url: "https://www.phylx.ai/",
+    logo: "https://www.phylx.ai/phylx-logo.jpeg",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "PHYLX",
+    url: "https://www.phylx.ai/",
+  },
+];
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className="bg-white font-sans text-charcoal antialiased">
         {children}
       </body>
