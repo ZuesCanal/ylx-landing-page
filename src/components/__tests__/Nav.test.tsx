@@ -6,7 +6,7 @@ describe("Nav", () => {
   it("renders the wordmark and a CTA linking to the waitlist section", () => {
     render(<Nav />);
     expect(screen.getByAltText("YLX")).toBeInTheDocument();
-    const cta = screen.getByRole("link", { name: /request access/i });
+    const cta = screen.getByRole("link", { name: /sign up/i });
     expect(cta).toHaveAttribute("href", "#waitlist");
   });
 });
