@@ -9,8 +9,9 @@ import {
   type WaitlistFormValues,
 } from "@/lib/waitlist-schema";
 
-// TODO: replace with the real Formspree form ID before deploying.
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+// FormSubmit delivers each submission straight to these inboxes.
+// Each address must click the one-time FormSubmit activation email once.
+const RECIPIENTS = ["doctorzeus2013@gmail.com", "neale.java@gmail.com"];
 
 type SubmitState = "idle" | "submitting" | "success" | "error";
 
@@ -28,15 +29,33 @@ export function WaitlistForm() {
   async function onSubmit(values: WaitlistFormValues) {
     setSubmitState("submitting");
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
-      if (!response.ok) throw new Error("Formspree request failed");
+      const payload = {
+        Name: values.name,
+        "Work Email": values.email,
+        Organization: values.organization,
+        "Organization Type": values.organizationType,
+        _subject: `PHYLX access request — ${values.organization}`,
+        _template: "table",
+        _captcha: "false",
+      };
+
+      const results = await Promise.allSettled(
+        RECIPIENTS.map((recipient) =>
+          fetch(`https://formsubmit.co/ajax/${encodeURIComponent(recipient)}`, {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          }),
+        ),
+      );
+
+      const delivered = results.some(
+        (result) => result.status === "fulfilled" && result.value.ok,
+      );
+      if (!delivered) throw new Error("Submission failed");
       setSubmitState("success");
       reset();
     } catch {
