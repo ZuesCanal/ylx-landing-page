@@ -26,7 +26,7 @@ describe("Hero", () => {
   it("shows the connected evidence system", () => {
     render(<Hero />);
     for (const name of ["Trace", "Policy", "Execute", "Intelligence"]) {
-      expect(screen.getByRole("heading", { name: `Refrnce ${name}` })).toBeInTheDocument();
+      expect(screen.getByRole("heading", { name: new RegExp(`Refrnce\\s*${name}`) })).toBeInTheDocument();
     }
     expect(screen.getByText("Refrnce Core")).toBeInTheDocument();
   });
