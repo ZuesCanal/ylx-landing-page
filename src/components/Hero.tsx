@@ -46,6 +46,7 @@ export function Hero() {
           <ProductCard area="rc-left" name="Trace" copy="Establish what happened and what supports it" panel={<GraphPanel />} />
           <ProductCard area="rc-right" name="Policy" copy="Test action against policy and authority" panel={<PolicyPanel />} />
           <ProductCard area="rc-bottom" name="Execute" copy="Move value with verified context and control" panel={<ExecutePanel />} />
+          </div>
         </div>
 
         <div className="mt-10 border-t border-rule pt-8 text-center">
