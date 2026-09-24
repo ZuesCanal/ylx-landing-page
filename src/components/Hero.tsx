@@ -42,7 +42,7 @@ export function Hero() {
             <line x1="4" y1="50" x2="96" y2="50" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke" className="trace-line" />
           </svg>
 
-          <div className="lg:col-start-2 lg:row-start-1">
+          <div className="lg:col-span-3 lg:col-start-1 lg:row-start-1 lg:flex lg:justify-center">
             <SystemNode label="Refrnce Intelligence" copy="Understand exposure and change">
               <ExposurePanel />
             </SystemNode>
@@ -61,7 +61,7 @@ export function Hero() {
               <PolicyPanel />
             </SystemNode>
           </div>
-          <div className="lg:col-start-2 lg:row-start-3">
+          <div className="lg:col-span-3 lg:col-start-1 lg:row-start-3 lg:flex lg:justify-center">
             <SystemNode label="Refrnce Execute" copy="Move value with verified context and control">
               <ExecutePanel />
             </SystemNode>
@@ -75,8 +75,8 @@ export function Hero() {
 
 function SystemNode({ label, copy, children }: { label: string; copy: string; children: ReactNode }) {
   return (
-    <div className="relative z-10 flex flex-col gap-4 rounded-lg border border-graphite bg-graphite p-3 text-canvas shadow-xl sm:flex-row sm:items-center lg:w-full lg:gap-3">
-      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-3 sm:w-[210px] lg:w-[135px]">{children}</div>
+    <div className="relative z-10 flex flex-col gap-4 rounded-lg border border-graphite bg-graphite p-3 text-canvas shadow-xl sm:flex-row sm:items-center lg:w-full lg:max-w-[280px] lg:gap-3">
+      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-3 sm:w-[210px] lg:w-[130px]">{children}</div>
       <div className="min-w-0 px-1 pb-1 sm:pb-0">
         <h2 className="text-base font-medium">{label}</h2>
         <p className="mt-2 text-xs leading-5 text-canvas/65 xl:text-[11px] xl:leading-4">{copy}</p>
