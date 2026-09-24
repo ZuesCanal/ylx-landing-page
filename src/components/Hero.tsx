@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section className="evidence-grid border-b border-rule">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
-        <div className="grid gap-14 xl:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] xl:items-center xl:gap-12">
+        <div className="grid gap-14 xl:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] xl:items-start xl:gap-12">
           <div className="max-w-xl">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
             Trusted infrastructure for digital-asset decisions
@@ -28,7 +28,7 @@ export function Hero() {
           </div>
 
           <div
-            className="relative grid gap-4 lg:grid-cols-[minmax(0,270px)_120px_minmax(0,270px)] lg:grid-rows-[auto_auto_auto] lg:items-center lg:justify-center lg:gap-x-5 lg:gap-y-8"
+            className="relative grid gap-4 lg:grid-cols-[minmax(0,230px)_110px_minmax(0,230px)] lg:grid-rows-[auto_auto_auto] lg:items-center lg:justify-center lg:gap-x-5 lg:gap-y-6"
           aria-label="Refrnce Trace evidence system"
         >
           {/* connectors */}
@@ -52,9 +52,9 @@ export function Hero() {
               <GraphPanel />
             </SystemNode>
           </div>
-          <div className="relative z-10 mx-auto flex h-40 w-40 flex-col items-center justify-center rounded-full border border-muted bg-canvas text-center shadow-sm lg:col-start-2 lg:row-start-2 lg:h-28 lg:w-28">
-            <strong className="text-base font-medium lg:text-sm">Refrnce Core</strong>
-            <span className="mt-2 max-w-24 text-[10px] leading-4 text-muted lg:mt-1">Context · Evidence · Identity · Policy · Audit</span>
+          <div className="relative z-10 mx-auto flex h-40 w-40 flex-col items-center justify-center rounded-full border border-muted bg-canvas text-center shadow-sm lg:col-start-2 lg:row-start-2 lg:h-24 lg:w-24">
+            <strong className="text-base font-medium lg:text-xs">Refrnce Core</strong>
+            <span className="mt-2 max-w-20 text-[10px] leading-4 text-muted lg:mt-1 lg:max-w-16 lg:text-[8px] lg:leading-3">Context · Evidence · Identity · Policy · Audit</span>
           </div>
           <div className="lg:col-start-3 lg:row-start-2">
             <SystemNode label="Refrnce Policy" copy="Test action against policy and authority">
@@ -75,18 +75,18 @@ export function Hero() {
 
 function SystemNode({ label, copy, children }: { label: string; copy: string; children: ReactNode }) {
   return (
-    <div className="relative z-10 flex flex-col gap-4 rounded-lg border border-graphite bg-graphite p-3 text-canvas shadow-xl sm:flex-row sm:items-center lg:w-full lg:max-w-[280px] lg:gap-3">
-      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-3 sm:w-[210px] lg:w-[130px]">{children}</div>
+    <div className="relative z-10 flex flex-col gap-4 rounded-lg border border-graphite bg-graphite p-2.5 text-canvas shadow-xl sm:flex-row sm:items-center lg:w-full lg:max-w-[240px] lg:gap-2.5">
+      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-2 sm:w-[210px] lg:w-[110px]">{children}</div>
       <div className="min-w-0 px-1 pb-1 sm:pb-0">
-        <h2 className="text-base font-medium">{label}</h2>
-        <p className="mt-2 text-xs leading-5 text-canvas/65 xl:text-[11px] xl:leading-4">{copy}</p>
+        <h2 className="text-sm font-medium">{label}</h2>
+        <p className="mt-1.5 text-[11px] leading-4 text-canvas/65 xl:text-[10px] xl:leading-[1.05rem]">{copy}</p>
       </div>
     </div>
   );
 }
 
 function PanelTitle({ children }: { children: ReactNode }) {
-  return <p className="mb-2 text-[10px] font-medium text-canvas/80">{children}</p>;
+  return <p className="mb-1.5 text-[9px] font-medium text-canvas/80">{children}</p>;
 }
 
 function ExposurePanel() {
@@ -100,8 +100,8 @@ function ExposurePanel() {
     <div>
       <PanelTitle>Exposure Overview</PanelTitle>
       <div className="flex items-baseline gap-2">
-        <span className="text-lg font-medium">$248.6M</span>
-        <span className="text-[9px] text-evidence">+2.4% (24h)</span>
+        <span className="text-base font-medium">$248.6M</span>
+        <span className="whitespace-nowrap text-[8px] text-evidence">+2.4% (24h)</span>
       </div>
       <svg viewBox="0 0 180 32" className="mt-1 h-8 w-full text-evidence" aria-hidden="true">
         <path d="M0 26 L20 24 L35 25 L55 20 L70 22 L90 16 L110 18 L130 12 L150 14 L165 8 L180 4 L180 32 L0 32Z" className="fill-evidence/15" />
@@ -127,7 +127,7 @@ function GraphPanel() {
     <div>
       <PanelTitle>Evidence Graph</PanelTitle>
       <div className="flex items-center gap-2">
-        <svg viewBox="0 0 110 100" className="h-20 w-24 text-evidence" aria-hidden="true">
+        <svg viewBox="0 0 110 100" className="h-16 w-20 text-evidence" aria-hidden="true">
           {edges.map(([a, b], i) => (
             <line key={i} x1={nodes[a][0]} y1={nodes[a][1]} x2={nodes[b][0]} y2={nodes[b][1]} stroke="currentColor" strokeOpacity="0.4" strokeWidth="0.8" />
           ))}
@@ -156,7 +156,7 @@ function PolicyPanel() {
       <PanelTitle>Policy Decision</PanelTitle>
       <ul className="space-y-1.5">
         {rows.map(([k, v, dot, txt]) => (
-          <li key={k} className="flex items-center justify-between rounded border border-canvas/10 bg-graphite px-2 py-1.5 text-[10px]">
+          <li key={k} className="flex items-center justify-between rounded border border-canvas/10 bg-graphite px-1.5 py-1 text-[9px]">
             <span className={`flex items-center gap-1.5 ${txt}`}><span className={`h-2 w-2 rounded-full ${dot}`} />{k}</span>
             <span className={txt}>{v}</span>
           </li>
@@ -178,7 +178,7 @@ function ExecutePanel() {
       <PanelTitle>Execution</PanelTitle>
       <ul className="space-y-1">
         {rows.map(([k, v, done]) => (
-          <li key={k} className="flex items-center justify-between rounded border border-canvas/10 bg-graphite px-2 py-1 text-[10px] text-canvas/80">
+          <li key={k} className="flex items-center justify-between rounded border border-canvas/10 bg-graphite px-1.5 py-0.5 text-[9px] text-canvas/80">
             <span className="flex items-center gap-1.5">
               {done ? (
                 <span className="flex h-3 w-3 items-center justify-center rounded-full bg-evidence"><Check className="h-2 w-2 text-panel" strokeWidth={3} /></span>
