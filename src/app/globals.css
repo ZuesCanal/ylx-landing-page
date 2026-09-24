@@ -241,12 +241,12 @@ body {
 /* Side-by-side hero variant: narrower cards so the diagram fits right of the headline */
 @media (min-width: 1280px) {
   .rc-side {
-    --rc-card-w: 260px;
+    --rc-card-w: 280px;
     --rc-hub: 148px;
     --rc-gap: 24px;
   }
-  .rc-side .rc-card { padding: 14px; grid-template-columns: 100px minmax(0, 1fr); column-gap: 12px; }
-  .rc-side .rc-panel { width: 100px; padding: 10px; }
+  .rc-side .rc-card { padding: 14px; grid-template-columns: 118px minmax(0, 1fr); column-gap: 12px; }
+  .rc-side .rc-panel { width: 118px; padding: 10px; }
   .rc-side .rc-eyebrow { font-size: 9px; }
   .rc-side .rc-name { font-size: 15px; }
   .rc-side .rc-copy { font-size: 11px; line-height: 1.4; }
