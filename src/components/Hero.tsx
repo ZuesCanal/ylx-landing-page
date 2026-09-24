@@ -85,7 +85,7 @@ export function Hero() {
 function SystemNode({ label, copy, children }: { label: string; copy: string; children: ReactNode }) {
   return (
     <div className="relative z-10 flex flex-col gap-3 rounded-lg border border-graphite bg-graphite p-2 text-canvas shadow-xl sm:flex-row sm:items-center lg:w-full lg:max-w-[270px] lg:gap-2">
-      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-1.5 sm:w-[210px] lg:w-[120px]">{children}</div>
+      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-1.5 sm:w-[210px] lg:w-[150px]">{children}</div>
       <div className="min-w-0 px-1 pb-1 sm:pb-0">
         <h2 className="text-xs font-medium">{label}</h2>
         <p className="mt-1 text-[10px] leading-3.5 text-canvas/65 xl:text-[9px] xl:leading-3">{copy}</p>
