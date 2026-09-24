@@ -136,7 +136,7 @@ function GraphPanel() {
     <div>
       <PanelTitle>Evidence Graph</PanelTitle>
       <div className="flex items-center gap-1.5">
-        <svg viewBox="0 0 110 100" className="h-12 w-14 text-evidence" aria-hidden="true">
+        <svg viewBox="0 0 110 100" className="h-12 w-12 text-evidence" aria-hidden="true">
           {edges.map(([a, b], i) => (
             <line key={i} x1={nodes[a][0]} y1={nodes[a][1]} x2={nodes[b][0]} y2={nodes[b][1]} stroke="currentColor" strokeOpacity="0.4" strokeWidth="0.8" />
           ))}
