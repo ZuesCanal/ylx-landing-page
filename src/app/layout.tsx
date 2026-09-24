@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Refrnce — Control Layer for Institutional Digital Assets",
   description:
     "Refrnce standardizes digital asset vault infrastructure into Sight, Flow, Trace, and Guard — a control layer institutions can safely allocate through.",
-  icons: { icon: "/favicon.png", type: "image/png" },
+  icons: { icon: "/favicon.png" },
   alternates: { canonical: "/" },
 
   openGraph: {
