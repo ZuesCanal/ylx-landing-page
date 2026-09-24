@@ -1,15 +1,14 @@
-import logoAsset from "@/assets/refrnce-logo.png.asset.json";
-
 export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         {/* eslint-disable-next-line @next/next/no-img-element -- quick local preview only */}
         <img
-          src={logoAsset.url}
+          src="/refrnce-logo.png"
           alt="Refrnce"
           className="h-16 w-16 rounded-xl shadow-sm"
         />
+
 
         <a
           href="#waitlist"
