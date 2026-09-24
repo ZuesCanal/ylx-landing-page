@@ -67,15 +67,15 @@ export function Hero() {
             </SystemNode>
           </div>
           </div>
+        </div>
 
-          <div className="mt-20 border-t border-rule pt-16 text-center">
-            <h2 className="text-3xl font-medium leading-tight sm:text-4xl">
-              Start with the capability your workflow needs.
-            </h2>
-            <p className="mt-4 text-base text-muted">
-              Every Refrnce product shares the same source-linked data, policy, identity and audit foundation.
-            </p>
-          </div>
+        <div className="mt-20 border-t border-rule pt-16 text-center">
+          <h2 className="text-3xl font-medium leading-tight sm:text-4xl">
+            Start with the capability your workflow needs.
+          </h2>
+          <p className="mt-4 text-base text-muted">
+            Every Refrnce product shares the same source-linked data, policy, identity and audit foundation.
+          </p>
         </div>
       </div>
     </section>
