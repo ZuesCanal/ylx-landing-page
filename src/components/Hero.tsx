@@ -27,7 +27,7 @@ export function Hero() {
         </div>
 
         <div
-          className="relative mt-16 grid gap-4 lg:grid-cols-[1fr_auto_1fr] lg:grid-rows-[auto_auto_auto] lg:items-center lg:gap-x-10 lg:gap-y-10"
+          className="relative mt-16 grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:grid-rows-[auto_auto_auto] lg:items-center lg:gap-x-10 lg:gap-y-10"
           aria-label="Refrnce Trace evidence system"
         >
           {/* connectors */}
@@ -73,7 +73,7 @@ export function Hero() {
 
 function SystemNode({ label, copy, children }: { label: string; copy: string; children: ReactNode }) {
   return (
-    <div className="relative z-10 flex flex-col gap-4 rounded-lg border border-graphite bg-graphite p-3 text-canvas shadow-xl sm:flex-row sm:items-center lg:w-[420px] lg:mx-auto">
+    <div className="relative z-10 flex flex-col gap-4 rounded-lg border border-graphite bg-graphite p-3 text-canvas shadow-xl sm:flex-row sm:items-center lg:mx-auto lg:w-full lg:max-w-[420px]">
       <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-3 sm:w-[210px]">{children}</div>
       <div className="px-1 pb-1 sm:pb-0">
         <h2 className="text-base font-medium">{label}</h2>
