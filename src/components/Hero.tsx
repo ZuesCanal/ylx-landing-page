@@ -25,18 +25,18 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto h-[480px] w-full max-w-2xl" aria-label="Refrnce Trace evidence system">
-          <svg className="absolute inset-0 h-full w-full text-muted" viewBox="0 0 680 480" fill="none" aria-hidden="true">
+        <div className="relative mx-auto flex w-full max-w-2xl flex-col gap-3 lg:block lg:h-[480px]" aria-label="Refrnce Trace evidence system">
+          <svg className="absolute inset-0 hidden h-full w-full text-muted lg:block" viewBox="0 0 680 480" fill="none" aria-hidden="true">
             <path className="trace-line" d="M340 240 170 134M340 240 520 112M340 240 540 350M340 240 165 356" stroke="currentColor" strokeWidth="1" />
           </svg>
-          <div className="absolute left-1/2 top-1/2 z-10 flex h-36 w-36 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-muted bg-canvas text-center shadow-sm">
+          <div className="order-2 mx-auto flex h-32 w-32 flex-col items-center justify-center rounded-full border border-muted bg-canvas text-center shadow-sm lg:absolute lg:left-1/2 lg:top-1/2 lg:z-10 lg:h-36 lg:w-36 lg:-translate-x-1/2 lg:-translate-y-1/2">
             <strong className="text-lg font-medium">Refrnce Core</strong>
             <span className="mt-2 max-w-24 text-[10px] leading-4 text-muted">Context · Evidence · Identity · Policy · Audit</span>
           </div>
-          <SystemNode className="left-0 top-16" label="Refrnce Trace" copy="Establish what happened and what supports it." status="Evidence graph" />
-          <SystemNode className="right-0 top-5" label="Source intelligence" copy="Resolve entities, accounts, assets, and events." status="Sources linked" />
-          <SystemNode className="bottom-4 right-0" label="Policy context" copy="Test the evidence against mandate and authority." status="Decision context" />
-          <SystemNode className="bottom-0 left-0" label="Audit record" copy="Package findings into a reviewable evidence trail." status="Export ready" />
+          <SystemNode className="order-1 lg:left-0 lg:top-16" label="Refrnce Trace" copy="Establish what happened and what supports it." status="Evidence graph" />
+          <SystemNode className="order-3 lg:right-0 lg:top-5" label="Source intelligence" copy="Resolve entities, accounts, assets, and events." status="Sources linked" />
+          <SystemNode className="order-4 lg:bottom-4 lg:right-0" label="Policy context" copy="Test the evidence against mandate and authority." status="Decision context" />
+          <SystemNode className="order-5 lg:bottom-0 lg:left-0" label="Audit record" copy="Package findings into a reviewable evidence trail." status="Export ready" />
         </div>
       </div>
     </section>
@@ -45,7 +45,7 @@ export function Hero() {
 
 function SystemNode({ className, label, copy, status }: { className: string; label: string; copy: string; status: string }) {
   return (
-    <div className={`absolute w-56 rounded-md border border-graphite bg-graphite p-4 text-canvas shadow-xl ${className}`}>
+    <div className={`relative w-full rounded-md border border-graphite bg-graphite p-4 text-canvas shadow-xl lg:absolute lg:w-56 ${className}`}>
       <div className="mb-4 flex items-center justify-between text-[10px] text-canvas/55">
         <span>{status}</span><span className="h-1.5 w-1.5 rounded-full bg-evidence" />
       </div>
