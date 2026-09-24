@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export function Hero() {
   return (
     <section className="evidence-grid border-b border-rule">
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
+      <div className="mx-auto max-w-7xl px-5 pb-10 pt-20 sm:px-8 lg:pt-24">
         <div className="grid gap-14 xl:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] xl:items-start xl:gap-12">
           <div className="max-w-xl">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
@@ -69,7 +69,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-20 border-t border-rule pt-16 text-center">
+        <div className="mt-10 border-t border-rule pt-8 text-center">
           <h2 className="text-3xl font-medium leading-tight sm:text-4xl">
             Start with the capability your workflow needs.
           </h2>
