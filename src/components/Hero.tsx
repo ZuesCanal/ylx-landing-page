@@ -42,7 +42,7 @@ export function Hero() {
             <line x1="4" y1="50" x2="96" y2="50" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke" className="trace-line" />
           </svg>
 
-          <div className="lg:col-span-2 lg:col-start-2 lg:row-start-1">
+          <div className="lg:col-start-2 lg:row-start-1">
             <SystemNode label="Refrnce Intelligence" copy="Understand exposure and change">
               <ExposurePanel />
             </SystemNode>
@@ -61,7 +61,7 @@ export function Hero() {
               <PolicyPanel />
             </SystemNode>
           </div>
-          <div className="lg:col-span-2 lg:col-start-1 lg:row-start-3">
+          <div className="lg:col-start-2 lg:row-start-3">
             <SystemNode label="Refrnce Execute" copy="Move value with verified context and control">
               <ExecutePanel />
             </SystemNode>
