@@ -5,68 +5,50 @@ export function Hero() {
   return (
     <section className="evidence-grid border-b border-rule">
       <div className="mx-auto max-w-7xl px-5 pb-10 pt-20 sm:px-8 lg:pt-24">
-        <div className="grid gap-14 xl:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] xl:items-start xl:gap-12">
-          <div className="max-w-xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
-            Trusted infrastructure for digital-asset decisions
-          </p>
-          <h1 className="mt-6 text-5xl font-medium leading-[0.98] sm:text-6xl lg:text-7xl">
-            Context before action.
-          </h1>
-          <p className="mt-7 max-w-lg text-lg leading-8 text-muted">
-            Refrnce gives institutions the source-linked evidence, intelligence,
-            policy, and authority required to act on-chain with confidence.
-          </p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <a href="#trace" className="inline-flex items-center gap-3 rounded bg-ink px-5 py-3 text-sm font-medium text-canvas transition-opacity hover:opacity-80">
-              Explore Trace <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </a>
-            <a href="#talk-to-us" className="rounded border border-ink px-5 py-3 text-sm font-medium transition-colors hover:bg-ink hover:text-canvas">
-              Talk to us
-            </a>
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-12">
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
+              Trusted infrastructure for digital-asset decisions
+            </p>
+            <h1 className="mt-6 text-5xl font-medium leading-[0.98] sm:text-6xl lg:text-7xl">
+              Context before action.
+            </h1>
           </div>
+          <div>
+            <p className="max-w-lg text-lg leading-8 text-muted">
+              Refrnce gives institutions the source-linked evidence, intelligence,
+              policy, and authority required to act on-chain with confidence.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <a href="#trace" className="inline-flex items-center gap-3 rounded bg-ink px-5 py-3 text-sm font-medium text-canvas transition-opacity hover:opacity-80">
+                Explore Trace <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <a href="#talk-to-us" className="rounded border border-ink px-5 py-3 text-sm font-medium transition-colors hover:bg-ink hover:text-canvas">
+                Talk to us
+              </a>
+            </div>
           </div>
+        </div>
 
-          <div
-            className="relative grid gap-3 lg:grid-cols-[minmax(0,270px)_110px_minmax(0,270px)] lg:grid-rows-[auto_auto_auto] lg:items-center lg:justify-center lg:gap-x-5 lg:gap-y-5"
-          aria-label="Refrnce Trace evidence system"
-        >
-          {/* connectors */}
-          <svg
-            className="pointer-events-none absolute inset-0 hidden h-full w-full text-muted/60 lg:block"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
-            <line x1="50" y1="0" x2="50" y2="100" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke" className="trace-line" />
-            <line x1="0" y1="50" x2="100" y2="50" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke" className="trace-line" />
-          </svg>
-
-          <div className="lg:col-span-3 lg:col-start-1 lg:row-start-1 lg:flex lg:justify-center">
-            <SystemNode label="Refrnce Intelligence" copy="Understand exposure and change">
-              <ExposurePanel />
-            </SystemNode>
+        <div className="rc-diagram mt-14" aria-label="Refrnce Trace evidence system">
+          <div className="rc-hub-cell">
+            <div className="rc-hub">
+              <span className="rc-conn rc-conn-top" aria-hidden="true" />
+              <span className="rc-conn rc-conn-bottom" aria-hidden="true" />
+              <span className="rc-conn rc-conn-left" aria-hidden="true" />
+              <span className="rc-conn rc-conn-right" aria-hidden="true" />
+              <strong className="rc-hub-title">Refrnce Core</strong>
+              <span className="rc-hub-caps">
+                <span className="whitespace-nowrap">Context&nbsp;· Evidence&nbsp;· Identity</span>
+                <br />
+                <span className="whitespace-nowrap">Policy&nbsp;· Audit</span>
+              </span>
+            </div>
           </div>
-          <div className="lg:col-start-1 lg:row-start-2">
-            <SystemNode label="Refrnce Trace" copy="Establish what happened and what supports it">
-              <GraphPanel />
-            </SystemNode>
-          </div>
-          <div className="relative z-10 mx-auto flex h-40 w-40 flex-col items-center justify-center rounded-full border border-muted bg-canvas pt-1 text-center shadow-sm lg:col-start-2 lg:row-start-2 lg:h-24 lg:w-24 lg:pt-1.5">
-            <strong className="text-base font-medium lg:text-xs">Refrnce Core</strong>
-            <span className="mt-2 max-w-20 text-[10px] leading-4 text-muted lg:mt-1 lg:max-w-16 lg:text-[8px] lg:leading-3">Context · Evidence · Identity · Policy · Audit</span>
-          </div>
-          <div className="lg:col-start-3 lg:row-start-2">
-            <SystemNode label="Refrnce Policy" copy="Test action against policy and authority">
-              <PolicyPanel />
-            </SystemNode>
-          </div>
-          <div className="lg:col-span-3 lg:col-start-1 lg:row-start-3 lg:flex lg:justify-center">
-            <SystemNode label="Refrnce Execute" copy="Move value with verified context and control">
-              <ExecutePanel />
-            </SystemNode>
-          </div>
-          </div>
+          <ProductCard area="rc-top" name="Intelligence" copy="Understand exposure and change" panel={<ExposurePanel />} />
+          <ProductCard area="rc-left" name="Trace" copy="Establish what happened and what supports it" panel={<GraphPanel />} />
+          <ProductCard area="rc-right" name="Policy" copy="Test action against policy and authority" panel={<PolicyPanel />} />
+          <ProductCard area="rc-bottom" name="Execute" copy="Move value with verified context and control" panel={<ExecutePanel />} />
         </div>
 
         <div className="mt-10 border-t border-rule pt-8 text-center">
@@ -82,47 +64,45 @@ export function Hero() {
   );
 }
 
-function SystemNode({ label, copy, children }: { label: string; copy: string; children: ReactNode }) {
+function ProductCard({ area, name, copy, panel }: { area: string; name: string; copy: string; panel: ReactNode }) {
   return (
-    <div className="relative z-10 flex flex-col gap-3 rounded-lg border border-graphite bg-graphite p-2 text-canvas shadow-xl sm:flex-row sm:items-center lg:w-full lg:max-w-[270px] lg:gap-2">
-      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-1.5 sm:w-[210px] lg:w-[150px]">{children}</div>
-      <div className="min-w-0 px-1 pb-1 sm:pb-0">
-        <h2 className="text-xs font-medium">{label}</h2>
-        <p className="mt-1 text-[10px] leading-3.5 text-canvas/65 xl:text-[9px] xl:leading-3">{copy}</p>
+    <div className={`rc-card ${area}`}>
+      <div className="rc-panel">{panel}</div>
+      <div className="rc-text">
+        <p className="rc-eyebrow">Refrnce</p>
+        <h2 className="rc-name">
+          <span className="sr-only">Refrnce </span>
+          {name}
+        </h2>
+        <p className="rc-copy">{copy}</p>
       </div>
     </div>
   );
 }
 
 function PanelTitle({ children }: { children: ReactNode }) {
-  return <p className="mb-1 text-[8px] font-medium text-canvas/80">{children}</p>;
+  return <p className="rc-panel-title">{children}</p>;
+}
+
+function Dot({ tone }: { tone: "accent" | "grey" | "review" | "alert" }) {
+  return <span className={`rc-dot rc-dot-${tone}`} aria-hidden="true" />;
 }
 
 function ExposurePanel() {
-  const rows: [string, string, string][] = [
-    ["Assets", "12", "bg-evidence"],
-    ["Counterparties", "48", "bg-review"],
-    ["Geographies", "23", "bg-canvas/50"],
-    ["Risk signals", "4", "bg-alert"],
-  ];
   return (
     <div>
-      <PanelTitle>Exposure Overview</PanelTitle>
-      <div className="flex items-baseline gap-1.5">
-        <span className="text-sm font-medium">$248.6M</span>
-        <span className="whitespace-nowrap text-[7px] text-evidence">+2.4% (24h)</span>
+      <PanelTitle>Exposure</PanelTitle>
+      <div className="flex items-baseline justify-between">
+        <span className="rc-value">$248.6M</span>
+        <span className="rc-num rc-accent">+2.4%</span>
       </div>
-      <svg viewBox="0 0 180 32" className="mt-0.5 h-6 w-full text-evidence" aria-hidden="true">
-        <path d="M0 26 L20 24 L35 25 L55 20 L70 22 L90 16 L110 18 L130 12 L150 14 L165 8 L180 4 L180 32 L0 32Z" className="fill-evidence/15" />
-        <path d="M0 26 L20 24 L35 25 L55 20 L70 22 L90 16 L110 18 L130 12 L150 14 L165 8 L180 4" stroke="currentColor" strokeWidth="1.2" fill="none" />
+      <svg viewBox="0 0 104 14" className="rc-spark" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 12 L14 11 L24 11.5 L36 9 L46 10 L58 7 L70 8 L82 5 L92 6 L104 2 L104 14 L0 14Z" className="rc-spark-fill" />
+        <path d="M0 12 L14 11 L24 11.5 L36 9 L46 10 L58 7 L70 8 L82 5 L92 6 L104 2" className="rc-spark-line" />
       </svg>
-      <ul className="mt-1 space-y-0.5">
-        {rows.map(([k, v, c]) => (
-          <li key={k} className="flex items-center justify-between whitespace-nowrap text-[8px] text-canvas/70">
-            <span className="flex items-center gap-1"><span className={`h-1 w-1 rounded-full ${c}`} />{k}</span>
-            <span>{v}</span>
-          </li>
-        ))}
+      <ul>
+        <li className="rc-row"><span className="rc-row-label"><Dot tone="accent" />Assets</span><span className="rc-num">12</span></li>
+        <li className="rc-row"><span className="rc-row-label"><Dot tone="grey" />Counterparties</span><span className="rc-num">48</span></li>
       </ul>
     </div>
   );
@@ -131,23 +111,22 @@ function ExposurePanel() {
 function GraphPanel() {
   const nodes: [number, number][] = [[20, 18], [60, 12], [95, 30], [30, 55], [70, 50], [55, 85], [20, 90], [95, 75]];
   const edges: [number, number][] = [[0, 4], [1, 4], [2, 4], [3, 4], [4, 5], [4, 6], [4, 7], [0, 3], [1, 2], [5, 7]];
-  const legend: [string, string][] = [["Entity", "bg-evidence"], ["Account", "bg-evidence/60"], ["Transaction", "bg-canvas/60"], ["Asset", "bg-canvas/35"]];
   return (
     <div>
       <PanelTitle>Evidence Graph</PanelTitle>
-      <div className="flex items-center gap-1.5">
-        <svg viewBox="0 0 110 100" className="h-12 w-12 text-evidence" aria-hidden="true">
+      <div className="flex items-center gap-2">
+        <svg viewBox="0 0 110 100" className="h-[54px] w-[40px] shrink-0" aria-hidden="true">
           {edges.map(([a, b], i) => (
-            <line key={i} x1={nodes[a][0]} y1={nodes[a][1]} x2={nodes[b][0]} y2={nodes[b][1]} stroke="currentColor" strokeOpacity="0.4" strokeWidth="0.8" />
+            <line key={i} x1={nodes[a][0]} y1={nodes[a][1]} x2={nodes[b][0]} y2={nodes[b][1]} className="rc-edge" />
           ))}
           {nodes.map(([x, y], i) => (
-            <circle key={i} cx={x} cy={y} r={i === 4 ? 6 : 4} className={i % 3 === 0 ? "fill-evidence" : "fill-canvas/40"} />
+            <circle key={i} cx={x} cy={y} r={i === 4 ? 9 : 7} className={i % 3 === 0 ? "rc-node-accent" : "rc-node"} />
           ))}
         </svg>
-        <ul className="space-y-0.5">
-          {legend.map(([k, c]) => (
-            <li key={k} className="flex items-center gap-1 whitespace-nowrap text-[8px] text-canvas/70"><span className={`h-1 w-1 rounded-full ${c}`} />{k}</li>
-          ))}
+        <ul className="min-w-0">
+          <li className="rc-row"><span className="rc-row-label"><Dot tone="accent" />Entity</span></li>
+          <li className="rc-row"><span className="rc-row-label"><Dot tone="grey" />Account</span></li>
+          <li className="rc-row"><span className="rc-row-label"><Dot tone="grey" />Asset</span></li>
         </ul>
       </div>
     </div>
@@ -155,20 +134,17 @@ function GraphPanel() {
 }
 
 function PolicyPanel() {
-  const rows: [string, string, string, string][] = [
-    ["Allowed", "92%", "bg-evidence", "text-evidence"],
-    ["Requires Review", "6%", "bg-review", "text-review"],
-    ["Blocked", "2%", "bg-alert", "text-alert"],
+  const rows: [string, string, "accent" | "review" | "alert"][] = [
+    ["Allowed", "92%", "accent"],
+    ["Review", "6%", "review"],
+    ["Blocked", "2%", "alert"],
   ];
   return (
     <div>
       <PanelTitle>Policy Decision</PanelTitle>
-      <ul className="space-y-1">
-        {rows.map(([k, v, dot, txt]) => (
-          <li key={k} className="flex items-center justify-between whitespace-nowrap rounded border border-canvas/10 bg-graphite px-1 py-0.5 text-[8px]">
-            <span className={`flex items-center gap-1 ${txt}`}><span className={`h-1.5 w-1.5 shrink-0 rounded-full ${dot}`} />{k}</span>
-            <span className={txt}>{v}</span>
-          </li>
+      <ul>
+        {rows.map(([k, v, tone]) => (
+          <li key={k} className="rc-row"><span className="rc-row-label"><Dot tone={tone} />{k}</span><span className="rc-num">{v}</span></li>
         ))}
       </ul>
     </div>
@@ -177,26 +153,22 @@ function PolicyPanel() {
 
 function ExecutePanel() {
   const rows: [string, string, boolean][] = [
-    ["Context", "Verified", true],
-    ["Policy", "Passed", true],
-    ["Approval", "Approved", true],
-    ["Execute", "In Progress", false],
+    ["Context", "Done", true],
+    ["Policy", "Done", true],
+    ["Approval", "Done", true],
+    ["Execute", "Live", false],
   ];
   return (
     <div>
       <PanelTitle>Execution</PanelTitle>
-      <ul className="space-y-1">
+      <ul>
         {rows.map(([k, v, done]) => (
-          <li key={k} className="flex items-center justify-between gap-1 whitespace-nowrap rounded border border-canvas/10 bg-graphite px-1 py-0.5 text-[8px] text-canvas/80">
-            <span className="flex items-center gap-1">
-              {done ? (
-                <span className="flex h-2.5 w-2.5 shrink-0 items-center justify-center rounded-full bg-evidence"><Check className="h-1.5 w-1.5 text-panel" strokeWidth={3} /></span>
-              ) : (
-                <span className="h-2.5 w-2.5 shrink-0 rounded-full border border-canvas/50" />
-              )}
+          <li key={k} className="rc-row">
+            <span className="rc-row-label">
+              {done ? <Check className="rc-check" strokeWidth={2.5} aria-hidden="true" /> : <span className="rc-pending" aria-hidden="true" />}
               {k}
             </span>
-            <span className={`shrink-0 whitespace-nowrap rounded px-1 py-px text-[7px] ${done ? "bg-evidence/20 text-evidence" : "bg-canvas/10 text-canvas/70"}`}>{v}</span>
+            <span className={`rc-pill ${done ? "" : "rc-pill-muted"}`}>{v}</span>
           </li>
         ))}
       </ul>
