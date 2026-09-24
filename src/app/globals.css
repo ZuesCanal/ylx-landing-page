@@ -89,7 +89,7 @@ body {
   .rc-top { grid-row: 1; grid-column: 1 / 4; }
   .rc-bottom { grid-row: 3; grid-column: 1 / 4; }
 }
-.rc-hub-cell { grid-area: hub; }
+.rc-hub-cell { grid-area: hub; padding: 14px; }
 .rc-top { grid-area: top; }
 .rc-left { grid-area: left; }
 .rc-right { grid-area: right; }
