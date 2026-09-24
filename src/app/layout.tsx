@@ -35,7 +35,7 @@ const structuredData = [
     "@type": "Organization",
     name: "Refrnce",
     url: "https://www.phylx.ai/",
-    logo: "https://www.phylx.ai/favicon.png",
+    logo: "https://www.phylx.ai/refrnce-logo.png",
   },
   {
     "@context": "https://schema.org",
