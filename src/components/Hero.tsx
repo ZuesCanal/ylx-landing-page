@@ -28,7 +28,7 @@ export function Hero() {
           </div>
 
           <div
-            className="relative grid gap-3 lg:grid-cols-[minmax(0,210px)_110px_minmax(0,210px)] lg:grid-rows-[auto_auto_auto] lg:items-center lg:justify-center lg:gap-x-5 lg:gap-y-5"
+            className="relative grid gap-3 lg:grid-cols-[minmax(0,215px)_110px_minmax(0,215px)] lg:grid-rows-[auto_auto_auto] lg:items-center lg:justify-center lg:gap-x-5 lg:gap-y-5"
           aria-label="Refrnce Trace evidence system"
         >
           {/* connectors */}
@@ -85,7 +85,7 @@ export function Hero() {
 function SystemNode({ label, copy, children }: { label: string; copy: string; children: ReactNode }) {
   return (
     <div className="relative z-10 flex flex-col gap-3 rounded-lg border border-graphite bg-graphite p-2 text-canvas shadow-xl sm:flex-row sm:items-center lg:w-full lg:max-w-[215px] lg:gap-2">
-      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-1.5 sm:w-[210px] lg:w-[96px]">{children}</div>
+      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-1.5 sm:w-[210px] lg:w-[120px]">{children}</div>
       <div className="min-w-0 px-1 pb-1 sm:pb-0">
         <h2 className="text-xs font-medium">{label}</h2>
         <p className="mt-1 text-[10px] leading-3.5 text-canvas/65 xl:text-[9px] xl:leading-3">{copy}</p>
@@ -177,8 +177,8 @@ function PolicyPanel() {
 
 function ExecutePanel() {
   const rows: [string, string, boolean][] = [
-    ["Context Verified", "Verified", true],
-    ["Policy Check", "Passed", true],
+    ["Context", "Verified", true],
+    ["Policy", "Passed", true],
     ["Approval", "Approved", true],
     ["Execute", "In Progress", false],
   ];
