@@ -25,10 +25,9 @@ describe("Hero", () => {
 
   it("shows the connected evidence system", () => {
     render(<Hero />);
-    expect(screen.getByText("Refrnce Trace")).toBeInTheDocument();
-    expect(screen.getByText("Refrnce Policy")).toBeInTheDocument();
-    expect(screen.getByText("Refrnce Execute")).toBeInTheDocument();
-    expect(screen.getByText("Refrnce Intelligence")).toBeInTheDocument();
+    for (const name of ["Trace", "Policy", "Execute", "Intelligence"]) {
+      expect(screen.getByRole("heading", { name: `Refrnce ${name}` })).toBeInTheDocument();
+    }
     expect(screen.getByText("Refrnce Core")).toBeInTheDocument();
   });
 });
