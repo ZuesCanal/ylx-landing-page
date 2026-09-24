@@ -31,10 +31,15 @@ export function Hero() {
           aria-label="Refrnce Trace evidence system"
         >
           {/* connectors */}
-          <div className="pointer-events-none absolute inset-0 hidden lg:block" aria-hidden="true">
-            <div className="absolute left-1/2 top-[12%] h-[76%] w-px -translate-x-1/2 bg-muted/50" />
-            <div className="absolute left-[8%] top-1/2 h-px w-[84%] -translate-y-1/2 bg-muted/50" />
-          </div>
+          <svg
+            className="pointer-events-none absolute inset-0 hidden h-full w-full text-muted/60 lg:block"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <line x1="50" y1="6" x2="50" y2="94" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke" className="trace-line" />
+            <line x1="4" y1="50" x2="96" y2="50" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke" className="trace-line" />
+          </svg>
 
           <div className="lg:col-start-2 lg:row-start-1">
             <SystemNode label="Refrnce Intelligence" copy="Understand exposure and change">
