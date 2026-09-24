@@ -52,7 +52,7 @@ export function Hero() {
               <GraphPanel />
             </SystemNode>
           </div>
-          <div className="relative z-10 mx-auto flex h-40 w-40 flex-col items-center justify-center rounded-full border border-muted bg-canvas text-center shadow-sm lg:col-start-2 lg:row-start-2 lg:h-24 lg:w-24">
+          <div className="relative z-10 mx-auto flex h-40 w-40 flex-col items-center justify-center rounded-full border border-muted bg-canvas pt-1 text-center shadow-sm lg:col-start-2 lg:row-start-2 lg:h-24 lg:w-24 lg:pt-1.5">
             <strong className="text-base font-medium lg:text-xs">Refrnce Core</strong>
             <span className="mt-2 max-w-20 text-[10px] leading-4 text-muted lg:mt-1 lg:max-w-16 lg:text-[8px] lg:leading-3">Context · Evidence · Identity · Policy · Audit</span>
           </div>
