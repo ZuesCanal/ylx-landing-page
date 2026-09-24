@@ -101,7 +101,7 @@ function ExposurePanel() {
       <PanelTitle>Exposure Overview</PanelTitle>
       <div className="flex items-baseline gap-2">
         <span className="text-base font-medium">$248.6M</span>
-        <span className="text-[8px] text-evidence">+2.4% (24h)</span>
+        <span className="whitespace-nowrap text-[8px] text-evidence">+2.4% (24h)</span>
       </div>
       <svg viewBox="0 0 180 32" className="mt-1 h-8 w-full text-evidence" aria-hidden="true">
         <path d="M0 26 L20 24 L35 25 L55 20 L70 22 L90 16 L110 18 L130 12 L150 14 L165 8 L180 4 L180 32 L0 32Z" className="fill-evidence/15" />
