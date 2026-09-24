@@ -17,6 +17,10 @@ describe("Hero", () => {
     render(<Hero />);
     const cta = screen.getByRole("link", { name: /explore trace/i });
     expect(cta).toHaveAttribute("href", "#trace");
+    expect(screen.getByRole("link", { name: /talk to us/i })).toHaveAttribute(
+      "href",
+      "#talk-to-us",
+    );
   });
 
   it("shows the connected evidence system", () => {
