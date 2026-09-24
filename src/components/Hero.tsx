@@ -19,7 +19,7 @@ export function Hero() {
             <a href="#trace" className="inline-flex items-center gap-3 rounded bg-ink px-5 py-3 text-sm font-medium text-canvas transition-opacity hover:opacity-80">
               Explore Trace <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
-            <a href="#waitlist" className="rounded border border-ink px-5 py-3 text-sm font-medium transition-colors hover:bg-ink hover:text-canvas">
+            <a href="#talk-to-us" className="rounded border border-ink px-5 py-3 text-sm font-medium transition-colors hover:bg-ink hover:text-canvas">
               Talk to us
             </a>
           </div>

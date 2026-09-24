@@ -14,7 +14,7 @@ export function Nav() {
           <a className="transition-colors hover:text-ink" href="#intelligence">Intelligence</a>
         </nav>
         <a
-          href="#waitlist"
+          href="#talk-to-us"
           className="rounded bg-ink px-5 py-2.5 text-sm font-medium text-canvas transition-opacity hover:opacity-80"
         >
           Talk to us

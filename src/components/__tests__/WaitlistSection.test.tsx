@@ -10,11 +10,11 @@ describe("WaitlistSection", () => {
     );
   });
 
-  it("exposes a #waitlist anchor target with the heading and form", () => {
+  it("exposes a #talk-to-us anchor target with the heading and form", () => {
     const { container } = render(<WaitlistSection />);
-    expect(container.querySelector("#waitlist")).not.toBeNull();
+    expect(container.querySelector("#talk-to-us")).not.toBeNull();
     expect(
-      screen.getByRole("heading", { name: /bring context into the decision/i })
+      screen.getByRole("heading", { name: /talk to us/i })
     ).toBeInTheDocument();
     expect(screen.getByLabelText(/work email/i)).toBeInTheDocument();
   });
