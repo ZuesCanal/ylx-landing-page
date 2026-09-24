@@ -7,7 +7,7 @@ describe("Footer", () => {
     render(<Footer />);
     expect(screen.getByText(/in active development/i)).toBeInTheDocument();
     expect(
-      screen.getByText(new RegExp(`${new Date().getFullYear()} YLX`))
+      screen.getByText(new RegExp(`${new Date().getFullYear()} Refrnce`))
     ).toBeInTheDocument();
   });
 });
