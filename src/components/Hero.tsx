@@ -28,7 +28,7 @@ export function Hero() {
           </div>
 
           <div
-            className="relative grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:grid-rows-[auto_auto_auto] lg:items-center lg:gap-x-4 lg:gap-y-8"
+            className="relative grid gap-4 lg:grid-cols-[minmax(0,270px)_120px_minmax(0,270px)] lg:grid-rows-[auto_auto_auto] lg:items-center lg:justify-center lg:gap-x-5 lg:gap-y-8"
           aria-label="Refrnce Trace evidence system"
         >
           {/* connectors */}
@@ -42,7 +42,7 @@ export function Hero() {
             <line x1="4" y1="50" x2="96" y2="50" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke" className="trace-line" />
           </svg>
 
-          <div className="lg:col-span-2 lg:col-start-2 lg:row-start-1">
+          <div className="lg:col-span-3 lg:col-start-1 lg:row-start-1 lg:flex lg:justify-center">
             <SystemNode label="Refrnce Intelligence" copy="Understand exposure and change">
               <ExposurePanel />
             </SystemNode>
@@ -52,16 +52,16 @@ export function Hero() {
               <GraphPanel />
             </SystemNode>
           </div>
-          <div className="relative z-10 mx-auto flex h-40 w-40 flex-col items-center justify-center rounded-full border border-muted bg-canvas text-center shadow-sm lg:col-start-2 lg:row-start-2 lg:h-36 lg:w-36 xl:h-28 xl:w-28">
-            <strong className="text-base font-medium xl:text-sm">Refrnce Core</strong>
-            <span className="mt-2 max-w-24 text-[10px] leading-4 text-muted xl:mt-1.5">Context · Evidence · Identity · Policy · Audit</span>
+          <div className="relative z-10 mx-auto flex h-40 w-40 flex-col items-center justify-center rounded-full border border-muted bg-canvas text-center shadow-sm lg:col-start-2 lg:row-start-2 lg:h-28 lg:w-28">
+            <strong className="text-base font-medium lg:text-sm">Refrnce Core</strong>
+            <span className="mt-2 max-w-24 text-[10px] leading-4 text-muted lg:mt-1">Context · Evidence · Identity · Policy · Audit</span>
           </div>
           <div className="lg:col-start-3 lg:row-start-2">
             <SystemNode label="Refrnce Policy" copy="Test action against policy and authority">
               <PolicyPanel />
             </SystemNode>
           </div>
-          <div className="lg:col-span-2 lg:col-start-1 lg:row-start-3">
+          <div className="lg:col-span-3 lg:col-start-1 lg:row-start-3 lg:flex lg:justify-center">
             <SystemNode label="Refrnce Execute" copy="Move value with verified context and control">
               <ExecutePanel />
             </SystemNode>
@@ -75,8 +75,8 @@ export function Hero() {
 
 function SystemNode({ label, copy, children }: { label: string; copy: string; children: ReactNode }) {
   return (
-    <div className="relative z-10 flex flex-col gap-4 rounded-lg border border-graphite bg-graphite p-3 text-canvas shadow-xl sm:flex-row sm:items-center lg:mx-auto lg:w-full lg:max-w-[420px] xl:max-w-[400px]">
-      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-3 sm:w-[210px] xl:w-[150px]">{children}</div>
+    <div className="relative z-10 flex flex-col gap-4 rounded-lg border border-graphite bg-graphite p-3 text-canvas shadow-xl sm:flex-row sm:items-center lg:w-full lg:max-w-[280px] lg:gap-3">
+      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-3 sm:w-[210px] lg:w-[130px]">{children}</div>
       <div className="min-w-0 px-1 pb-1 sm:pb-0">
         <h2 className="text-base font-medium">{label}</h2>
         <p className="mt-2 text-xs leading-5 text-canvas/65 xl:text-[11px] xl:leading-4">{copy}</p>
