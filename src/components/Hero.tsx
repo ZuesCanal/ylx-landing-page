@@ -28,7 +28,7 @@ export function Hero() {
           </div>
 
           <div
-            className="relative grid gap-4 lg:grid-cols-[minmax(0,230px)_110px_minmax(0,230px)] lg:grid-rows-[auto_auto_auto] lg:items-center lg:justify-center lg:gap-x-5 lg:gap-y-6"
+            className="relative grid gap-3 lg:grid-cols-[minmax(0,215px)_110px_minmax(0,215px)] lg:grid-rows-[auto_auto_auto] lg:items-center lg:justify-center lg:gap-x-5 lg:gap-y-5"
           aria-label="Refrnce Trace evidence system"
         >
           {/* connectors */}
@@ -84,18 +84,18 @@ export function Hero() {
 
 function SystemNode({ label, copy, children }: { label: string; copy: string; children: ReactNode }) {
   return (
-    <div className="relative z-10 flex flex-col gap-4 rounded-lg border border-graphite bg-graphite p-2.5 text-canvas shadow-xl sm:flex-row sm:items-center lg:w-full lg:max-w-[240px] lg:gap-2.5">
-      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-2 sm:w-[210px] lg:w-[110px]">{children}</div>
+    <div className="relative z-10 flex flex-col gap-3 rounded-lg border border-graphite bg-graphite p-2 text-canvas shadow-xl sm:flex-row sm:items-center lg:w-full lg:max-w-[215px] lg:gap-2">
+      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-1.5 sm:w-[210px] lg:w-[120px]">{children}</div>
       <div className="min-w-0 px-1 pb-1 sm:pb-0">
-        <h2 className="text-sm font-medium">{label}</h2>
-        <p className="mt-1.5 text-[11px] leading-4 text-canvas/65 xl:text-[10px] xl:leading-[1.05rem]">{copy}</p>
+        <h2 className="text-xs font-medium">{label}</h2>
+        <p className="mt-1 text-[10px] leading-3.5 text-canvas/65 xl:text-[9px] xl:leading-3">{copy}</p>
       </div>
     </div>
   );
 }
 
 function PanelTitle({ children }: { children: ReactNode }) {
-  return <p className="mb-1.5 text-[9px] font-medium text-canvas/80">{children}</p>;
+  return <p className="mb-1 text-[8px] font-medium text-canvas/80">{children}</p>;
 }
 
 function ExposurePanel() {
@@ -108,18 +108,18 @@ function ExposurePanel() {
   return (
     <div>
       <PanelTitle>Exposure Overview</PanelTitle>
-      <div className="flex items-baseline gap-2">
-        <span className="text-base font-medium">$248.6M</span>
-        <span className="whitespace-nowrap text-[8px] text-evidence">+2.4% (24h)</span>
+      <div className="flex items-baseline gap-1.5">
+        <span className="text-sm font-medium">$248.6M</span>
+        <span className="whitespace-nowrap text-[7px] text-evidence">+2.4% (24h)</span>
       </div>
-      <svg viewBox="0 0 180 32" className="mt-1 h-8 w-full text-evidence" aria-hidden="true">
+      <svg viewBox="0 0 180 32" className="mt-0.5 h-6 w-full text-evidence" aria-hidden="true">
         <path d="M0 26 L20 24 L35 25 L55 20 L70 22 L90 16 L110 18 L130 12 L150 14 L165 8 L180 4 L180 32 L0 32Z" className="fill-evidence/15" />
         <path d="M0 26 L20 24 L35 25 L55 20 L70 22 L90 16 L110 18 L130 12 L150 14 L165 8 L180 4" stroke="currentColor" strokeWidth="1.2" fill="none" />
       </svg>
-      <ul className="mt-2 space-y-1">
+      <ul className="mt-1 space-y-0.5">
         {rows.map(([k, v, c]) => (
-          <li key={k} className="flex items-center justify-between text-[9px] text-canvas/70">
-            <span className="flex items-center gap-1.5"><span className={`h-1.5 w-1.5 rounded-full ${c}`} />{k}</span>
+          <li key={k} className="flex items-center justify-between whitespace-nowrap text-[8px] text-canvas/70">
+            <span className="flex items-center gap-1"><span className={`h-1 w-1 rounded-full ${c}`} />{k}</span>
             <span>{v}</span>
           </li>
         ))}
@@ -135,8 +135,8 @@ function GraphPanel() {
   return (
     <div>
       <PanelTitle>Evidence Graph</PanelTitle>
-      <div className="flex items-center gap-2">
-        <svg viewBox="0 0 110 100" className="h-16 w-20 text-evidence" aria-hidden="true">
+      <div className="flex items-center gap-1.5">
+        <svg viewBox="0 0 110 100" className="h-12 w-12 text-evidence" aria-hidden="true">
           {edges.map(([a, b], i) => (
             <line key={i} x1={nodes[a][0]} y1={nodes[a][1]} x2={nodes[b][0]} y2={nodes[b][1]} stroke="currentColor" strokeOpacity="0.4" strokeWidth="0.8" />
           ))}
@@ -144,9 +144,9 @@ function GraphPanel() {
             <circle key={i} cx={x} cy={y} r={i === 4 ? 6 : 4} className={i % 3 === 0 ? "fill-evidence" : "fill-canvas/40"} />
           ))}
         </svg>
-        <ul className="space-y-1">
+        <ul className="space-y-0.5">
           {legend.map(([k, c]) => (
-            <li key={k} className="flex items-center gap-1.5 text-[9px] text-canvas/70"><span className={`h-1.5 w-1.5 rounded-full ${c}`} />{k}</li>
+            <li key={k} className="flex items-center gap-1 whitespace-nowrap text-[8px] text-canvas/70"><span className={`h-1 w-1 rounded-full ${c}`} />{k}</li>
           ))}
         </ul>
       </div>
@@ -163,10 +163,10 @@ function PolicyPanel() {
   return (
     <div>
       <PanelTitle>Policy Decision</PanelTitle>
-      <ul className="space-y-1.5">
+      <ul className="space-y-1">
         {rows.map(([k, v, dot, txt]) => (
-          <li key={k} className="flex items-center justify-between rounded border border-canvas/10 bg-graphite px-1.5 py-1 text-[9px]">
-            <span className={`flex items-center gap-1.5 ${txt}`}><span className={`h-2 w-2 rounded-full ${dot}`} />{k}</span>
+          <li key={k} className="flex items-center justify-between whitespace-nowrap rounded border border-canvas/10 bg-graphite px-1 py-0.5 text-[8px]">
+            <span className={`flex items-center gap-1 ${txt}`}><span className={`h-1.5 w-1.5 shrink-0 rounded-full ${dot}`} />{k}</span>
             <span className={txt}>{v}</span>
           </li>
         ))}
@@ -177,8 +177,8 @@ function PolicyPanel() {
 
 function ExecutePanel() {
   const rows: [string, string, boolean][] = [
-    ["Context Verified", "Verified", true],
-    ["Policy Check", "Passed", true],
+    ["Context", "Verified", true],
+    ["Policy", "Passed", true],
     ["Approval", "Approved", true],
     ["Execute", "In Progress", false],
   ];
@@ -187,16 +187,16 @@ function ExecutePanel() {
       <PanelTitle>Execution</PanelTitle>
       <ul className="space-y-1">
         {rows.map(([k, v, done]) => (
-          <li key={k} className="flex items-center justify-between rounded border border-canvas/10 bg-graphite px-1.5 py-0.5 text-[9px] text-canvas/80">
-            <span className="flex items-center gap-1.5">
+          <li key={k} className="flex items-center justify-between gap-1 whitespace-nowrap rounded border border-canvas/10 bg-graphite px-1 py-0.5 text-[8px] text-canvas/80">
+            <span className="flex items-center gap-1">
               {done ? (
-                <span className="flex h-3 w-3 items-center justify-center rounded-full bg-evidence"><Check className="h-2 w-2 text-panel" strokeWidth={3} /></span>
+                <span className="flex h-2.5 w-2.5 shrink-0 items-center justify-center rounded-full bg-evidence"><Check className="h-1.5 w-1.5 text-panel" strokeWidth={3} /></span>
               ) : (
-                <span className="h-3 w-3 rounded-full border border-canvas/50" />
+                <span className="h-2.5 w-2.5 shrink-0 rounded-full border border-canvas/50" />
               )}
               {k}
             </span>
-            <span className={`rounded px-1.5 py-0.5 text-[8px] ${done ? "bg-evidence/20 text-evidence" : "bg-canvas/10 text-canvas/70"}`}>{v}</span>
+            <span className={`shrink-0 whitespace-nowrap rounded px-1 py-px text-[7px] ${done ? "bg-evidence/20 text-evidence" : "bg-canvas/10 text-canvas/70"}`}>{v}</span>
           </li>
         ))}
       </ul>
