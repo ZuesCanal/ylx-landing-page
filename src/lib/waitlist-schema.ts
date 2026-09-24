@@ -5,6 +5,8 @@ export const organizationTypes = [
   "Family Office",
   "Fund",
   "DeFi Protocol",
+  "Auditor",
+  "Investigator",
   "Other",
 ] as const;
 
