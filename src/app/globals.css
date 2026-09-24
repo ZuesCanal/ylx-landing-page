@@ -2,6 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --canvas: 42 30% 96%;
+  --ink: 120 3% 9%;
+  --graphite: 150 6% 17%;
+  --panel: 150 5% 11%;
+  --rule: 40 10% 84%;
+  --muted: 36 4% 38%;
+  --evidence: 158 54% 45%;
+  --review: 38 85% 54%;
+  --alert: 2 65% 56%;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  letter-spacing: 0;
+}
+
+::selection {
+  background: hsl(var(--rule));
+  color: hsl(var(--ink));
+}
+
+.evidence-grid {
+  background-image:
+    linear-gradient(hsl(var(--rule) / 0.48) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--rule) / 0.48) 1px, transparent 1px);
+  background-size: 96px 96px;
+}
+
+.trace-line {
+  stroke-dasharray: 9 7;
+  animation: trace-flow 9s linear infinite;
+}
+
+@keyframes trace-flow {
+  to { stroke-dashoffset: -64; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trace-line { animation: none; }
 }

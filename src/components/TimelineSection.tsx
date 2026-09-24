@@ -3,11 +3,12 @@ import { SectionReveal } from "./SectionReveal";
 
 export function TimelineSection() {
   return (
-    <section className="border-t border-slate-200 py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="workflow" className="border-b border-rule py-24">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionReveal>
-          <h2 className="text-4xl font-medium tracking-tighter text-navy sm:text-5xl">
-            Path to a Global Standard
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">Investigation workflow</p>
+          <h2 className="mt-4 text-4xl font-medium leading-tight sm:text-5xl">
+            From event to evidence.
           </h2>
         </SectionReveal>
 
@@ -15,15 +16,15 @@ export function TimelineSection() {
           {timeline.map((milestone, index) => (
             <SectionReveal
               key={milestone.title}
-              className="border-t border-navy pt-4"
+              className="border-t border-ink pt-4"
             >
-              <span className="text-sm text-slate-400">
+              <span className="text-sm text-muted/60">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-2 text-lg font-medium text-navy">
+              <h3 className="mt-2 text-lg font-medium text-ink">
                 {milestone.title}
               </h3>
-              <p className="mt-2 text-sm text-charcoal">
+              <p className="mt-2 text-sm leading-6 text-muted">
                 {milestone.description}
               </p>
             </SectionReveal>

@@ -1,4 +1,4 @@
-import { Eye, Route, Search, ShieldCheck, type LucideIcon } from "lucide-react";
+import { Fingerprint, GitBranch, FileCheck2, Network, type LucideIcon } from "lucide-react";
 
 export type Pillar = {
   name: string;
@@ -9,34 +9,34 @@ export type Pillar = {
 
 export const pillars: Pillar[] = [
   {
-    name: "Sight",
-    icon: Eye,
+    name: "Transaction provenance",
+    icon: Fingerprint,
     function:
-      "Full visibility into protocol and treasury exposure across every chain you hold.",
+      "Reconstruct where value originated, how it moved, and where it settled.",
     workflowFit:
-      "Plugs into the screening and monitoring your risk desk already runs — nothing to migrate.",
+      "Source references remain attached to every event in the path.",
   },
   {
-    name: "Flow",
-    icon: Route,
-    function: "Policy-directed capital routing across vetted yield venues.",
+    name: "Relationship mapping",
+    icon: Network,
+    function: "Connect entities, accounts, counterparties, protocols, and assets.",
     workflowFit:
-      "Executes within the allocation limits your investment committee has already approved.",
+      "Move from an isolated address to the wider exposure context.",
   },
   {
-    name: "Trace",
-    icon: Search,
+    name: "Exposure paths",
+    icon: GitBranch,
     function:
-      "On-chain investigation and evidence trails for every wallet and counterparty.",
+      "Surface direct and indirect routes through contracts and venues.",
     workflowFit:
-      "Produces the audit trail your compliance function already expects for allocation decisions.",
+      "Separate observed movement from inferred relationships.",
   },
   {
-    name: "Guard",
-    icon: ShieldCheck,
+    name: "Decision-ready evidence",
+    icon: FileCheck2,
     function:
-      "Hard risk gates and standardized ratings — IST, RQS, and OFAC screening.",
+      "Package findings, timestamps, sources, and open questions into one record.",
     workflowFit:
-      "Enforces the exclusion rules your mandate already defines, before capital ever moves.",
+      "Give risk, compliance, and investment teams the same reviewable context.",
   },
 ];

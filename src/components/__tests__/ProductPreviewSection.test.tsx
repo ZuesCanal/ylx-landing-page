@@ -3,13 +3,13 @@ import { render, screen } from "@testing-library/react";
 import { ProductPreviewSection } from "../ProductPreviewSection";
 
 describe("ProductPreviewSection", () => {
-  it("renders the product preview heading and screenshot", () => {
+  it("renders the Trace investigation surface", () => {
     render(<ProductPreviewSection />);
     expect(
-      screen.getByRole("heading", { name: /see what you hold/i })
+      screen.getByRole("heading", { name: /follow the evidence/i })
     ).toBeInTheDocument();
     expect(
-      screen.getByAltText(/portfolio health check/i)
+      screen.getByLabelText(/trace investigation interface/i)
     ).toBeInTheDocument();
   });
 });
