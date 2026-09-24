@@ -2,12 +2,12 @@ import { describe, expect, it } from "vitest";
 import { pillars } from "../pillars";
 
 describe("pillars", () => {
-  it("defines exactly the four control-layer pillars in order", () => {
+  it("defines exactly the four Trace evidence outcomes in order", () => {
     expect(pillars.map((p) => p.name)).toEqual([
-      "Sight",
-      "Flow",
-      "Trace",
-      "Guard",
+      "Transaction provenance",
+      "Relationship mapping",
+      "Exposure paths",
+      "Decision-ready evidence",
     ]);
   });
 

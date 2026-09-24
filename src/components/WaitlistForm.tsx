@@ -86,7 +86,7 @@ export function WaitlistForm() {
           className="mt-1 w-full rounded border border-rule bg-canvas px-3 py-2.5 text-ink focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
         />
         {errors.name && (
-          <p id="name-error" className="mt-1 text-sm text-red-600">
+          <p id="name-error" className="mt-1 text-sm text-alert">
             {errors.name.message}
           </p>
         )}
@@ -105,7 +105,7 @@ export function WaitlistForm() {
           className="mt-1 w-full rounded border border-rule bg-canvas px-3 py-2.5 text-ink focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
         />
         {errors.email && (
-          <p id="email-error" className="mt-1 text-sm text-red-600">
+          <p id="email-error" className="mt-1 text-sm text-alert">
             {errors.email.message}
           </p>
         )}
@@ -124,7 +124,7 @@ export function WaitlistForm() {
           className="mt-1 w-full rounded border border-rule bg-canvas px-3 py-2.5 text-ink focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
         />
         {errors.organization && (
-          <p id="organization-error" className="mt-1 text-sm text-red-600">
+          <p id="organization-error" className="mt-1 text-sm text-alert">
             {errors.organization.message}
           </p>
         )}
@@ -157,14 +157,14 @@ export function WaitlistForm() {
           ))}
         </select>
         {errors.organizationType && (
-          <p id="organizationType-error" className="mt-1 text-sm text-red-600">
+          <p id="organizationType-error" className="mt-1 text-sm text-alert">
             {errors.organizationType.message}
           </p>
         )}
       </div>
 
       {submitState === "error" && (
-        <p role="alert" className="text-sm text-red-600">
+        <p role="alert" className="text-sm text-alert">
           Something went wrong submitting your request. Please try again.
         </p>
       )}
