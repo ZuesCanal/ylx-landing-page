@@ -34,7 +34,7 @@ export function WaitlistForm() {
         "Work Email": values.email,
         Organization: values.organization,
         "Organization Type": values.organizationType,
-        _subject: `PHYLX access request — ${values.organization}`,
+        _subject: `Refrnce access request — ${values.organization}`,
         _template: "table",
         _captcha: "false",
       };

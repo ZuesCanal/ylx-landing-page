@@ -36,7 +36,7 @@ describe("WaitlistForm", () => {
       screen.getByRole("button", { name: /request whitepaper/i })
     );
 
-    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
+    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
     expect(await screen.findByRole("status")).toHaveTextContent(
       /request received/i
     );

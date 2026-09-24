@@ -7,7 +7,7 @@ export function ProductPreviewSection() {
       <div className="mx-auto max-w-4xl px-6 text-center">
         <SectionReveal>
           <p className="text-xs uppercase tracking-wide text-slate-400">
-            Live on PHYLX
+            Live on Refrnce
           </p>
           <h2 className="mt-2 text-4xl font-medium tracking-tighter text-navy sm:text-5xl">
             See what you hold. How it scores.
@@ -22,7 +22,7 @@ export function ProductPreviewSection() {
         <SectionReveal className="mt-12">
           <Image
             src="/health-check-preview.png"
-            alt="PHYLX portfolio health check: wallet summary, weighted IST, RQS, and Track Record scores, policy breach count, and a six-position holdings table with per-asset yield, scores, policy status, and audit verification."
+            alt="Refrnce portfolio health check: wallet summary, weighted IST, RQS, and Track Record scores, policy breach count, and a six-position holdings table with per-asset yield, scores, policy status, and audit verification."
             width={2592}
             height={2236}
             sizes="(min-width: 896px) 896px, 100vw"
