@@ -28,7 +28,7 @@ export function Hero() {
           </div>
 
           <div
-            className="relative grid gap-3 lg:grid-cols-[minmax(0,215px)_110px_minmax(0,215px)] lg:grid-rows-[auto_auto_auto] lg:items-center lg:justify-center lg:gap-x-5 lg:gap-y-5"
+            className="relative grid gap-3 lg:grid-cols-[minmax(0,270px)_110px_minmax(0,270px)] lg:grid-rows-[auto_auto_auto] lg:items-center lg:justify-center lg:gap-x-5 lg:gap-y-5"
           aria-label="Refrnce Trace evidence system"
         >
           {/* connectors */}
@@ -38,8 +38,8 @@ export function Hero() {
             preserveAspectRatio="none"
             aria-hidden="true"
           >
-            <line x1="50" y1="6" x2="50" y2="94" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke" className="trace-line" />
-            <line x1="4" y1="50" x2="96" y2="50" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke" className="trace-line" />
+            <line x1="50" y1="0" x2="50" y2="100" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke" className="trace-line" />
+            <line x1="0" y1="50" x2="100" y2="50" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke" className="trace-line" />
           </svg>
 
           <div className="lg:col-span-3 lg:col-start-1 lg:row-start-1 lg:flex lg:justify-center">
@@ -84,8 +84,8 @@ export function Hero() {
 
 function SystemNode({ label, copy, children }: { label: string; copy: string; children: ReactNode }) {
   return (
-    <div className="relative z-10 flex flex-col gap-3 rounded-lg border border-graphite bg-graphite p-2 text-canvas shadow-xl sm:flex-row sm:items-center lg:w-full lg:max-w-[215px] lg:gap-2">
-      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-1.5 sm:w-[210px] lg:w-[120px]">{children}</div>
+    <div className="relative z-10 flex flex-col gap-3 rounded-lg border border-graphite bg-graphite p-2 text-canvas shadow-xl sm:flex-row sm:items-center lg:w-full lg:max-w-[270px] lg:gap-2">
+      <div className="w-full shrink-0 rounded-md border border-canvas/10 bg-panel p-1.5 sm:w-[210px] lg:w-[150px]">{children}</div>
       <div className="min-w-0 px-1 pb-1 sm:pb-0">
         <h2 className="text-xs font-medium">{label}</h2>
         <p className="mt-1 text-[10px] leading-3.5 text-canvas/65 xl:text-[9px] xl:leading-3">{copy}</p>
