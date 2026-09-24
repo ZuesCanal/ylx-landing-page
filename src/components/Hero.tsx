@@ -5,17 +5,15 @@ export function Hero() {
   return (
     <section className="evidence-grid border-b border-rule">
       <div className="mx-auto max-w-7xl px-5 pb-10 pt-20 sm:px-8 lg:pt-24">
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-12">
-          <div>
+        <div className="grid gap-12 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-start xl:gap-8">
+          <div className="max-w-xl">
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
               Trusted infrastructure for digital-asset decisions
             </p>
             <h1 className="mt-6 text-5xl font-medium leading-[0.98] sm:text-6xl lg:text-7xl">
               Context before action.
             </h1>
-          </div>
-          <div>
-            <p className="max-w-lg text-lg leading-8 text-muted">
+            <p className="mt-6 max-w-lg text-lg leading-8 text-muted">
               Refrnce gives institutions the source-linked evidence, intelligence,
               policy, and authority required to act on-chain with confidence.
             </p>
@@ -28,9 +26,8 @@ export function Hero() {
               </a>
             </div>
           </div>
-        </div>
 
-        <div className="rc-diagram mt-14" aria-label="Refrnce Trace evidence system">
+          <div className="rc-diagram rc-side mt-14 xl:mt-0" aria-label="Refrnce Trace evidence system">
           <div className="rc-hub-cell">
             <div className="rc-hub">
               <span className="rc-conn rc-conn-top" aria-hidden="true" />
