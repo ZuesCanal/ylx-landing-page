@@ -13,7 +13,7 @@ describe("WaitlistForm", () => {
     render(<WaitlistForm />);
 
     await user.click(
-      screen.getByRole("button", { name: /request whitepaper/i })
+      screen.getByRole("button", { name: /request trace access/i })
     );
 
     expect(await screen.findByText(/enter your full name/i)).toBeInTheDocument();
@@ -33,7 +33,7 @@ describe("WaitlistForm", () => {
       "Fund"
     );
     await user.click(
-      screen.getByRole("button", { name: /request whitepaper/i })
+      screen.getByRole("button", { name: /request trace access/i })
     );
 
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));

@@ -65,9 +65,8 @@ export function WaitlistForm() {
 
   if (submitState === "success") {
     return (
-      <p role="status" className="font-medium text-navy">
-        Request received. Our team will follow up with the whitepaper, pitch
-        deck, and pilot access details.
+      <p role="status" className="font-medium text-ink">
+        Request received. Our team will follow up with the Trace briefing and pilot access details.
       </p>
     );
   }
@@ -84,7 +83,7 @@ export function WaitlistForm() {
           aria-invalid={errors.name ? "true" : "false"}
           aria-describedby={errors.name ? "name-error" : undefined}
           {...register("name")}
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy"
+          className="mt-1 w-full rounded border border-rule bg-canvas px-3 py-2.5 text-ink focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
         />
         {errors.name && (
           <p id="name-error" className="mt-1 text-sm text-red-600">
@@ -103,7 +102,7 @@ export function WaitlistForm() {
           aria-invalid={errors.email ? "true" : "false"}
           aria-describedby={errors.email ? "email-error" : undefined}
           {...register("email")}
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy"
+          className="mt-1 w-full rounded border border-rule bg-canvas px-3 py-2.5 text-ink focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
         />
         {errors.email && (
           <p id="email-error" className="mt-1 text-sm text-red-600">
@@ -122,7 +121,7 @@ export function WaitlistForm() {
           aria-invalid={errors.organization ? "true" : "false"}
           aria-describedby={errors.organization ? "organization-error" : undefined}
           {...register("organization")}
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy"
+          className="mt-1 w-full rounded border border-rule bg-canvas px-3 py-2.5 text-ink focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
         />
         {errors.organization && (
           <p id="organization-error" className="mt-1 text-sm text-red-600">
@@ -146,7 +145,7 @@ export function WaitlistForm() {
             errors.organizationType ? "organizationType-error" : undefined
           }
           {...register("organizationType")}
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-charcoal focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy"
+          className="mt-1 w-full rounded border border-rule bg-canvas px-3 py-2.5 text-ink focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
         >
           <option value="" disabled>
             Select one
@@ -173,11 +172,11 @@ export function WaitlistForm() {
       <button
         type="submit"
         disabled={submitState === "submitting"}
-        className="mt-2 rounded-full bg-navy px-4 py-2 font-medium text-white transition-opacity hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-2 rounded bg-ink px-4 py-3 font-medium text-canvas transition-opacity hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {submitState === "submitting"
           ? "Submitting…"
-          : "Request Whitepaper & Pilot Access"}
+          : "Request Trace Access"}
       </button>
     </form>
   );

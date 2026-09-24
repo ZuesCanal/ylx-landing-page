@@ -5,8 +5,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: "#0A0A0A",
-        charcoal: "#525252",
+        canvas: "hsl(var(--canvas) / <alpha-value>)",
+        ink: "hsl(var(--ink) / <alpha-value>)",
+        graphite: "hsl(var(--graphite) / <alpha-value>)",
+        panel: "hsl(var(--panel) / <alpha-value>)",
+        rule: "hsl(var(--rule) / <alpha-value>)",
+        muted: "hsl(var(--muted) / <alpha-value>)",
+        evidence: "hsl(var(--evidence) / <alpha-value>)",
+        review: "hsl(var(--review) / <alpha-value>)",
+        alert: "hsl(var(--alert) / <alpha-value>)",
+        navy: "hsl(var(--ink) / <alpha-value>)",
+        charcoal: "hsl(var(--muted) / <alpha-value>)",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],

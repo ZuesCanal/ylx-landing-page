@@ -5,23 +5,23 @@ export type TimelineMilestone = {
 
 export const timeline: TimelineMilestone[] = [
   {
-    title: "Research & Methodology",
+    title: "Detect the event",
     description:
-      "IST, RQS, Fair Yield, Track Record, and Conviction scoring defined and calibrated against live protocol data.",
+      "Start from a transaction, address, asset movement, or counterparty requiring review.",
   },
   {
-    title: "Institutional Pilots",
+    title: "Map the relationships",
     description:
-      "MVP validation with early pilot partners across Stablecoins, Auditing, and Structured Products.",
+      "Resolve connected entities, accounts, contracts, assets, and transaction paths.",
   },
   {
-    title: "Multi-Jurisdiction Coverage",
+    title: "Verify the evidence",
     description:
-      "Eligibility expanded across eight regulatory regimes, from the US and EU to Singapore and the UAE.",
+      "Corroborate the path against source-linked records and retain unresolved questions.",
   },
   {
-    title: "Standardized Global Rating Framework",
+    title: "Export the record",
     description:
-      "A common reference standard for institutional-grade digital asset risk.",
+      "Deliver a reviewable trail for research, compliance, risk, and investment decisions.",
   },
 ];

@@ -7,9 +7,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.phylx.ai"),
-  title: "Refrnce — Control Layer for Institutional Digital Assets",
+  title: "Refrnce Trace — Context Before Action",
   description:
-    "Refrnce standardizes digital asset vault infrastructure into Sight, Flow, Trace, and Guard — a control layer institutions can safely allocate through.",
+    "Refrnce Trace links on-chain events, entities, accounts, and assets to source evidence for institutional digital-asset decisions.",
   icons: { icon: "/favicon.png" },
   alternates: { canonical: "/" },
 
@@ -17,15 +17,15 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.phylx.ai/",
     siteName: "Refrnce",
-    title: "Refrnce — Control Layer for Institutional Digital Assets",
+    title: "Refrnce Trace — Context Before Action",
     description:
-      "Turn your mandate into policy, evidence, approvals, and an audit trail — standardized ratings for digital assets across Sight, Flow, Trace, and Guard.",
+      "Establish what happened on-chain, how it connects, and what source evidence supports the decision.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Refrnce — Control Layer for Institutional Digital Assets",
+    title: "Refrnce Trace — Context Before Action",
     description:
-      "Turn your mandate into policy, evidence, approvals, and an audit trail — standardized ratings for digital assets.",
+      "Source-linked evidence and investigation context for institutional digital-asset decisions.",
   },
 };
 
@@ -54,7 +54,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="bg-white font-sans text-charcoal antialiased">
+      <body className="bg-canvas font-sans text-ink antialiased">
         {children}
       </body>
     </html>

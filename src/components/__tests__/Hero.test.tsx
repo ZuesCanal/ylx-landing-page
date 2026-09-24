@@ -3,29 +3,25 @@ import { render, screen } from "@testing-library/react";
 import { Hero } from "../Hero";
 
 describe("Hero", () => {
-  it("names the control layer and all four pillars in the subhead", () => {
+  it("leads with Trace-first positioning", () => {
     render(<Hero />);
     expect(
-      screen.getByRole("heading", { name: /trusted control layer/i })
+      screen.getByRole("heading", { name: /context before action/i })
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/Sight, Flow, Trace, and Guard/i)
+      screen.getByText(/source-linked evidence/i)
     ).toBeInTheDocument();
   });
 
   it("links its CTA to the waitlist section", () => {
     render(<Hero />);
-    const cta = screen.getByRole("link", { name: /request whitepaper/i });
-    expect(cta).toHaveAttribute("href", "#waitlist");
+    const cta = screen.getByRole("link", { name: /explore trace/i });
+    expect(cta).toHaveAttribute("href", "#trace");
   });
 
-  it("shows the covered-universe coverage stats", () => {
+  it("shows the connected evidence system", () => {
     render(<Hero />);
-    expect(screen.getByText("700+")).toBeInTheDocument();
-    expect(
-      screen.getByText(/Covered Universe/i)
-    ).toBeInTheDocument();
-    expect(screen.getByText("$1T+")).toBeInTheDocument();
-    expect(screen.getByText(/Covered TVL/i)).toBeInTheDocument();
+    expect(screen.getByText("Refrnce Trace")).toBeInTheDocument();
+    expect(screen.getByText("Audit record")).toBeInTheDocument();
   });
 });

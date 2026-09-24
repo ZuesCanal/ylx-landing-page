@@ -14,7 +14,7 @@ describe("WaitlistSection", () => {
     const { container } = render(<WaitlistSection />);
     expect(container.querySelector("#waitlist")).not.toBeNull();
     expect(
-      screen.getByRole("heading", { name: /investor & enterprise waitlist/i })
+      screen.getByRole("heading", { name: /bring context into the decision/i })
     ).toBeInTheDocument();
     expect(screen.getByLabelText(/work email/i)).toBeInTheDocument();
   });
